@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Promotions - Mood and Bites</title>
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #FFDAB9;
+}
+
+ /* Navigation styles (copied from first page) */
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #ff9a86; /* dark background for nav */
+    padding: 10px;
+  }
+
+  .nav-container a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+
+  .nav-container a:hover {
+    background-color: peachpuff;
+  }
+
+  /* Highlight About Us link */
+  promotions-link {
+    font-weight: bold;
+    
+  }
+
+  /* MOOD & BITES is a heading, not a button → no pointer, no hover effect as button */
+    .brand-heading {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: -0.2px;
+      background: transparent;
+      color: #FFF6EA;
+      padding: 0.4rem 1rem;
+      cursor: default;
+      border: none;
+      white-space: nowrap;
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.05);
+    }
+
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .promo-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .promo {
+    background-color: #222;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+  }
+  .promo h2 {
+    font-family: serif;
+    font-style: italic;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .promo h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .promo p {
+    font-size: 14px;
+  }
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  /* Main content styling */
+  .content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #ff9a86;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 30px;
+      margin-right: 10px;
+    }
+    /* Location and icons */
+    .top-info {
+      display: flex;
+      align-items: center;
+    }
+    .location, .icons {
+      margin-left: 15px;
+    }
+ 
+    /* Container for categories and search */
+.categories-search-container {
+  background-color: #ff9a86; /* match your example background color */
+  padding: 10px 20px; /* optional padding for spacing */
+  border-radius: 10px; /* optional, for rounded corners */
+}
+
+/* Style your category buttons to match your shape/size: */
+.category-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.category-btn:hover {
+  background-color: #f0f0f0;
+}
+
+
+/* Container for all categories */
+.category-group {
+  display: grid; /* hide by default */
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+/* Show the active category */
+.category-group.active {
+  display: flex;
+}
+
+/* Style for menu item cards */
+.menu-item {
+  background-color: #fff;
+  width: 220px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+.menu-item:hover {
+  transform: translateY(-2px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.menu-item-details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.menu-item h4 {
+  margin: 0 0 5px 0;
+}
+.menu-item p {
+  margin: 3px 0;
+}
+.price {
+  color: #e91e63;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.quantity-controls button {
+  padding: 5px 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+.quantity {
+  min-width: 30px;
+  text-align: center;
+  font-size: 1.2em;
+}
+ /* Footer styles for social icons */
+  footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: transparent; /* optional */
+  }
+
+/* Add to Cart button style */
+.add-to-cart {
+  background-color: #e91e63;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+   text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #e91e63; /* Darker pink on hover */
+
+}
+
+ /* Social icons */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .social-icons a {
+    font-size: 4em;
+    color:  #ff9a86;
+    text-decoration: none;
+  }
+
+  .social-icons a:hover {
+    color: #555;
+  }
+
+
+</style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<div class="header-menu">
+  <div class="nav-container">
+  <div class="nav-container">
+  <li><span class="nav-btn brand-heading">MOOD & BITES</span></li>
+  <a href="index.html" >HOMEPAGE</a>
+  <a href="about.html" class="about-link">ABOUT US</a> 
+  <a href="menu.html" class="active">MENU</a> 
+  <a href="promotions.html" class="active">PROMOTIONS</a> <!-- Current page -->
+  <a href="#">ORDER ONLINE</a>
+  <a href="#">CONTACT US</a>
+  </div>
+  </div>
+</div>
+
+<div class="title">CURRENT PROMOS</div>
+<div class="subtitle">
+  We offer innovative promotions that are seasonal & diverse in variety. By partnering with trending lifestyle brands, we keep our customers engaged with fresh product innovations & dynamic brand partnerships.
+</div>
+
+
+<div class="items-container" id="itemsContainer">
+<!-- Category Sections -->
+<div class="category-group" data-category="coffles" style="display:flex;">
+  <!-- Coffee Items -->
+  <div class="menu-item">
+    <img src="C:\Users\Vodacom01\OneDrive\Desktop\IMAGES.html\croffles\banana nutella premium croffles.webp" alt="Banana Nutella Premium Croffles" />
+    <div class="menu-item-details">
+      <h4>Banana Nutella Premium Croffles</h4>
+      <p>from R 77.55</p>
+      <p>For reference: Crispy croffles filled with creamy Nutella and topped with fresh bananas and nuts.</p>
+      <div class="price">R 77.55</div>
+      <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <span class="quantity">0</span>
+        <button class="increase">+</button>
+
+      </div>
+    </div>
+  </div>
+
+<!-- Item: Biscoff Premium Croffles -->
+  <div class="menu-item">
+    <img src="C:\Users\Vodacom01\OneDrive\Desktop\IMAGES.html\croffles\biscoff premuim coffles.webp" alt="Biscoff Premium Croffles" />
+    <div class="menu-item-details">
+      <h4>Biscoff Premium Croffles</h4>
+      <p>from R 77.55</p>
+      <p>For reference: Delicious waffle-croissant hybrid, infused with Biscoff spread, offering a sweet, crunchy delight. </p>
+      <div class="price">R 77.55</div>
+      <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <span class="quantity">0</span>
+        <button class="increase">+</button>
+      </div>
+    </div>
+  </div>
+<!-- Item: Chocolate Premium Croffles -->
+  <div class="menu-item">
+    <img src="C:\Users\Vodacom01\OneDrive\Desktop\IMAGES.html\croffles\chocolate premium coffles.webp" alt="chocolate Premium Croffles" />
+    <div class="menu-item-details">
+      <h4>Chocolate Premium Croffles</h4>
+      <p>from R 77.55</p>
+      <p>For reference: Deliciously crispy croissant waffles drizzled with rich chocolate, perfect for dessert lovers. </p>
+      <div class="price">R 77.55</div>
+      <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <span class="quantity">0</span>
+        <button class="increase">+</button>
+      </div>
+    </div>
+  </div>
+
+<!-- Item: Cinnamon Sugar Premium Croffles -->
+  <div class="menu-item">
+    <img src="C:\Users\Vodacom01\OneDrive\Desktop\IMAGES.html\croffles\cinnamon sugar premium croffles.webp" alt="Cinnamon Sugar Premium Croffles" />
+    <div class="menu-item-details">
+      <h4>Cinnamon Sugar Premium Croffles</h4>
+      <p>from R 77.55</p>
+      <p> For reference: Flaky, sweet waffles infused with cinnamon and sugar, perfect for a delightful treat.</p>
+      <div class="price">R 77.55</div>
+      <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <span class="quantity">0</span>
+        <button class="increase">+</button>
+      </div>
+    </div>
+  </div>
+
+<!-- Item: Oreo Premium Croffles -->
+  <div class="menu-item">
+    <img src="C:\Users\Vodacom01\OneDrive\Desktop\IMAGES.html\croffles\oreo premium croffles.webp" alt="Oreo Premium Croffles" />
+    <div class="menu-item-details">
+      <h4>Oreo Premium Croffles</h4>
+      <p>from R 77.55</p>
+      <p> For reference: Deliciously crispy croffles filled with creamy Oreo flavor, perfect for a sweet treat.</p>
+      <div class="price">R 77.55</div>
+      <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <span class="quantity">0</span>
+        <button class="increase">+</button>
+      </div>
+    </div>
+  </div>
+
+<!-- Item: S'mores Premium Croffles -->
+  <div class="menu-item">
+    <img src="C:\Users\Vodacom01\OneDrive\Desktop\IMAGES.html\croffles\s'mores premium coffles.webp" alt="S'mores Premium Croffles" />
+    <div class="menu-item-details">
+      <h4>S'mores Premium Croffles</h4>
+      <p>from R 77.55</p>
+      <p>For reference: Crispy layered pastry with gooey s'mores filling. </p>
+      <div class="price">R 77.55</div>
+      <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <span class="quantity">0</span>
+        <button class="increase">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Item: Strawberry Premium Croffles -->
+  <div class="menu-item">
+    <img src="C:\Users\Vodacom01\OneDrive\Desktop\IMAGES.html\croffles\strawberry premuim croffles.webp" alt="Strawberry Premium Croffles" />
+    <div class="menu-item-details">
+      <h4>Strawberry Premium Croffles</h4>
+      <p>from R 77.55</p>
+      <p> For reference: Flaky, sweet croissant-waffle hybrid topped with fresh strawberries and a drizzle of syrup.</p>
+      <div class="price">R 77.55</div>
+      <div class="quantity-controls">
+        <button class="decrease">-</button>
+        <span class="quantity">0</span>
+        <button class="increase">+</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <footer class="bottom-section">
+
+    <button class="add-to-cart">Add to Cart</button>
+
+ <h2>MOOD & BITES</h2>
+
+<!-- Include Font Awesome CSS (if not already included in your <head>) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<!-- Social media icons container -->
+<div class="social-icons">
+  <a href="https://www.instagram.com/moodandbites/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.tiktok.com/@moodandbites" target="_blank" aria-label="TikTok">
+    <i class="fab fa-tiktok"></i>
+  </a>
+  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a href="https://threads.net/@moodandbites?xmt=AQF0Rcm3Wf-eb-oV8Ceyy8p-WxRQbEjEOCCvQymzX8hVva0" target="_blank" aria-label="Threads">
+    <i class="fab fa-twitter"></i> <!-- Placeholder icon -->
+  </a>
+</div>
+
+</div>
+    </footer>
+    <script>
+ 
+ // Select all increase/decrease buttons
+document.querySelectorAll('.increase, .decrease').forEach(button => {
+  button.addEventListener('click', () => {
+    // Find the closest parent .menu-item
+    const menuItem = button.closest('.menu-item');
+    // Find the quantity span within this menu item
+    const qtySpan = menuItem.querySelector('.quantity');
+    // Parse current quantity
+    let qty = parseInt(qtySpan.textContent);
+    if (button.classList.contains('increase')) {
+      qty++;
+    } else if (button.classList.contains('decrease')) {
+      if (qty > 0) {
+        qty--;
+      }
+    }
+    // Update the display
+    qtySpan.textContent = qty;
+  });
+});
+
+  // Add to Cart button
+  document.querySelector('.add-to-cart').addEventListener('click', function() {
+    if (Object.keys(cart).length === 0) {
+      alert('Please add items to your cart');
+    } else {
+      console.log('Cart:', cart);
+      alert('Items added to cart! Total items: ' + Object.values(cart).reduce((sum, item) => sum + item.quantity, 0));
+    }
+  });
+</script>
+
+</body>
+</html>

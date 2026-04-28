@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>MOOD & Bites Privacy | Policies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #fff2e6 0%, #ffe0cc 100%);
+            font-family: 'Segoe UI', 'Roboto', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: #4a2e2a;
+            line-height: 1.5;
+            padding: 2rem 1.5rem;
+        }
+
+        .privacy-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: rgba(255, 248, 240, 0.92);
+            backdrop-filter: blur(0px);
+            border-radius: 3rem;
+            box-shadow: 0 25px 45px -12px rgba(160, 90, 55, 0.35), 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 215, 185, 0.8);
+        }
+
+       
+        .header {
+            background: #fde3d0;
+            padding: 2rem 2rem 1.5rem 2rem;
+            border-bottom: 2px solid #ffcfac;
+            position: relative;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #c96f3e, #b55a2e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 12px rgba(255, 190, 130, 0.3);
+            margin-bottom: 0.5rem;
+        }
+
+        .header .last-updated {
+            font-size: 0.85rem;
+            color: #b47c58;
+            background: #fff1e6;
+            display: inline-block;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            backdrop-filter: blur(2px);
+        }
+
+        .header:before {
+            content: "&#129360;";
+            font-size: 3rem;
+            position: absolute;
+            left: 1.5rem;
+            top: 1.2rem;
+            opacity: 0.3;
+            transform: rotate(-15deg);
+            pointer-events: none;
+        }
+
+        .header:after {
+            content: "&#129360;";
+            font-size: 2.5rem;
+            position: absolute;
+            right: 1.8rem;
+            bottom: 0.8rem;
+            opacity: 0.25;
+            transform: rotate(10deg);
+            pointer-events: none;
+        }
+
+       
+        .privacy-content {
+            padding: 2.5rem 2.2rem 3rem 2.2rem;
+        }
+
+        .policy-section {
+            margin-bottom: 2.2rem;
+            scroll-margin-top: 1rem;
+        }
+
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-section h2 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #b6562a;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-left: 5px solid #ffad7a;
+            padding-left: 1rem;
+        }
+
+        .policy-section h2 i {
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+
+        .policy-section p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #4b3b34;
+        }
+
+        .policy-section ul, .policy-section ol {
+            margin: 0.8rem 0 1rem 1.8rem;
+            color: #4b3b34;
+        }
+
+        .policy-section li {
+            margin: 0.5rem 0;
+            line-height: 1.45;
+        }
+
+        .highlight-peach {
+            background: #ffede1;
+            border-radius: 24px;
+            padding: 0.3rem 0.6rem;
+            font-weight: 500;
+            color: #b45a2e;
+        }
+
+        .card-note {
+            background: #fff4ec;
+            border-radius: 28px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0 0.8rem 0;
+            border: 1px solid #ffddc4;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .card-note p {
+            margin-bottom: 0.3rem;
+        }
+
+        .card-note p:last-child {
+            margin-bottom: 0;
+        }
+
+        .small-peach-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-size: 1.1rem;
+        }
+
+        hr {
+            margin: 2rem 0 1rem;
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, #ffcfac, #ffe0cd, #ffcfac);
+        }
+
+        footer {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #bb8a6a;
+            border-top: 1px dashed #fadbbc;
+            padding-top: 1.8rem;
+        }
+
+        a {
+            color: #c57344;
+            text-decoration: none;
+            border-bottom: 1px dotted #e2b48c;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #a3481a;
+            border-bottom-color: #c57344;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 1rem;
+            }
+            .privacy-content {
+                padding: 1.5rem;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .policy-section h2 {
+                font-size: 1.4rem;
+            }
+        }
+
+    
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 15% 30%, rgba(255, 190, 130, 0.08) 2%, transparent 2.5%),
+                              radial-gradient(circle at 75% 70%, rgba(255, 170, 100, 0.06) 1.8%, transparent 2%);
+            background-size: 48px 48px, 32px 32px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .policy-section strong {
+            color: #b25326;
+        }
+    </style>
+</head>
+<body>
+
+
+<main class="privacy-container">
+    <div class="&#129360">
+        <h1>&#129360; PRIVACY POLICIES</h1>
+        <div class="last-updated">📅 Last updated: April 25, 2026 · Effective from today</div>
+        <p style="margin-top: 12px; font-size: 0.9rem; color:#c28159;">Your trust is our sweetest responsibility</p>
+    </div>
+
+    <div class="privacy-content">
+        <!-- 
+            "ignore the gallery" – no gallery code present.
+            Complete privacy policies with relevant sections.
+        -->
+        <div class="policy-section">
+            <h2><span class="small-&#129360 -icon"> &#129360 </span> 1. Information We Collect</h2>
+            <p>We respect your privacy and are committed to protecting your personal data. This privacy policy describes how we handle information when you interact with our platform, events, café vlogs, and celebration features. Depending on your activity, we may collect:</p>
+            <ul>
+                <li><strong>Personal identifiers</strong> – name, email address, username, or similar contact details (only when voluntarily provided).</li>
+                <li><strong>Usage & device data</strong> – IP address, browser type, pages visited, and interaction with celebration or event content to improve user experience.</li>
+                <li><strong>Multimedia content</strong> – if you upload event photos or café vlog materials, we may collect metadata such as timestamps and image descriptions (only with explicit consent).</li>
+                <li><strong>Cookies & similar tech</strong> – to remember preferences and analyze anonymized trends.</li>
+            </ul>
+            <p>We never collect sensitive personal information without clear notice and your affirmative consent.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2><span class="small-&#129360 -icon"> &#129360 </span> 2. How We Use Your Information</h2>
+            <p>Your information helps us create a personalized, secure, and seamless experience across our services. Uses include:</p>
+            <ul>
+                <li>Providing, operating, and improving our event updates, celebration galleries, and café vlog features.</li>
+                <li>Communicating with you regarding policy changes, security alerts, or support messages.</li>
+                <li>Analyzing usage trends to enhance content performance and user satisfaction.</li>
+                <li>Protecting against fraudulent, unauthorized, or illegal activity.</li>
+                <li>Complying with legal obligations and enforcing our terms.</li>
+            </ul>
+            <div class="card-note">
+                <p><span class="small-&#129360 -icon"> &#129360 </span><strong>Mood & Bites promise:</strong> We will never sell your personal information to third parties. Any data sharing is limited, transparent, and required by service operation or law.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2><span class="small-&#129360 -icon"> &#129360 </span> 3. Sharing & Disclosure</h2>
+            <p>We may share your data only in the following limited scenarios:</p>
+            <ul>
+                <li><strong>Service providers & partners</strong> – trusted third parties who assist with hosting, analytics (e.g., anonymized metrics), or customer support. They are bound by strict confidentiality agreements.</li>
+                <li><strong>Legal compliance</strong> – when required by law, subpoena, or governmental request to protect our rights, safety, or property.</li>
+                <li><strong>Business transfers</strong> – in the event of a merger, acquisition, or asset sale, your information may be transferred, but we will notify you beforehand.</li>
+                <li><strong>With your explicit consent</strong> – for any other purpose disclosed at the time of collection.</li>
+            </ul>
+            <p>All shared data is minimized and pseudonymized whenever possible.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2><span class="small-&#129360 -icon"> &#129360 </span> 4. Data Security & Retention</h2>
+            <p>We implement appropriate technical and organizational measures to protect your personal information against accidental loss, unauthorized access, alteration, or disclosure. Our security protocols include encryption (TLS), regular security audits, and access controls.</p>
+            <p>We retain your personal data only as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required or permitted by law. For event photos or vlog content, we keep your materials active as long as you maintain an account or until you request deletion.</p>
+            <p>📌 <strong>Retention period summary:</strong> Account info – until account closure; analytics logs – up to 24 months in aggregated form; support records – 3 years.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2><span class="small-&#129360 -icon"> &#129360 </span> 5. Your Privacy Rights</h2>
+            <p>Depending on your location (including GDPR, CCPA, and similar frameworks), you may have the following rights regarding your personal data:</p>
+            <ul>
+                <li><strong>Right to Access</strong> – obtain confirmation whether we process your data and request a copy.</li>
+                <li><strong>Right to Rectification</strong> – correct inaccurate or incomplete information.</li>
+                <li><strong>Right to Erasure (Right to be forgotten)</strong> – request deletion of your data under certain conditions.</li>
+                <li><strong>Right to Restrict Processing</strong> – limit how we use your data.</li>
+                <li><strong>Right to Data Portability</strong> – receive your data in a structured, machine-readable format.</li>
+                <li><strong>Right to Object</strong> – opt-out of certain processing (e.g., direct marketing).</li>
+                <li><strong>Right to Withdraw Consent</strong> – where processing is based on consent, you may withdraw anytime.</li>
+            </ul>
+            <p>To exercise any of these rights, please contact us using the information in Section 8. We will respond within 30 days.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2><span class="small-&#129360 -icon"> &#129360 </span> 6. Cookies & Tracking Technologies</h2>
+            <p>Our website uses cookies and similar tracking technologies to improve functionality, analyze performance, and provide a customized experience. You can manage cookie preferences via your browser settings. Types of cookies include:</p>
+            <ul>
+                <li><strong>Essential cookies:</strong> required for navigation and basic features (security, authentication).</li>
+                <li><strong>Analytics/performance cookies:</strong> help us count visits and traffic sources to measure site performance (e.g., Google Analytics anonymized data).</li>
+                <li><strong>Functionality cookies:</strong> remember your preferences (language, region) for a seamless return.</li>
+            </ul>
+            <p>By using our services, you consent to our use of cookies as described. You may disable non-essential cookies, but some features may be limited.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2> <span class="small-&#129360 -icon"> &#129360 </span> 7. Third-Party Links & Embedded Content</h2>
+            <p>Our celebration galleries, event pics, and café vlogs may contain links to external websites, social media plugins, or embedded video content (e.g., YouTube, Vimeo). These third-party sites have their own privacy policies, and we are not responsible for their practices. We encourage you to read their policies before interacting.</p>
+            <p>When you engage with embedded content, those third parties may collect your IP address, browser data, and interaction metrics. We limit data transmission to trusted providers and only include necessary integrations.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2> <span class="small-&#129360 -icon"> &#129360 </span> 8. Contact Us & Data Protection Officer</h2>
+            <p>If you have any questions, concerns, or requests regarding this privacy policy or data handling practices, you can reach our dedicated privacy team:</p>
+            <ul>
+                <li>📧 Email: <a href="mailto:privacy@peachygallery.com">Mood&Bites@gmail.com</a></li>
+                <li>📬 Postal address: 83 National Road Putatan</li>
+                <li>📞 Phone: +63 929 847 0795</li>
+            </ul>
+            <p>For data protection matters in the EU/UK, you may also contact our representative via email. We will strive to resolve any privacy complaints promptly and fairly.</p>
+            <div class="card-note">
+                <p><span class="small-peach-icon">⚖️</span> <strong>Supervisory authority:</strong> If you are located in the EEA, you have the right to lodge a complaint with your local data protection authority.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2> <span class="small-&#129360 -icon"> &#129360 </span> 9. Children’s Privacy</h2>
+            <p>Our services are not directed toward children under the age of 13 (or relevant age of digital consent depending on jurisdiction). We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us immediately, and we will take steps to delete the information.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2> <span class="small-&#129360 -icon"> &#129360 </span> 10. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technologies, legal requirements, or other operational needs. When we make material changes, we will post the updated policy on this page and update the "Last updated" date. For significant modifications, we may provide additional notice (e.g., via email or site notification).</p>
+            <p>We encourage you to review this policy periodically to stay informed about how we protect your information. Your continued use of our platform after any changes indicates your acceptance of the updated terms.</p>
+        </div>
+
+        <hr />
+
+        <!-- Summary note: good faith compliance -->
+        <div style="background: #f9ede2; border-radius: 2rem; padding: 1rem 1.5rem; margin-top: 1rem;">
+            <p style="font-size: 0.9rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;"><span style="font-size: 1.4rem;">✨</span> <strong>Your trust matters deeply to us.</strong> We adhere to industry-leading practices, maintain transparency, and respect your choices. If you have feedback or privacy inquiries, our team is just an email away.</p>
+        </div>
+
+        <footer>
+            <p>© 2026 Mood & Bites — Celebration, Events & Café Vlog | All rights reserved. </p>
+            <p style="margin-top: 6px;">This document constitutes the official Privacy Policy</p>
+        </footer>
+    </div>
+</main>
+</body>
+</html>
