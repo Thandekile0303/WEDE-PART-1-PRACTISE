@@ -12,12 +12,12 @@ body {
   background-color: #FFDAB9;
 }
 
- /* Navigation styles (copied from first page) */
+ 
   .nav-container {
     display: flex;
     justify-content: center;
     gap: 10px;
-    background-color: #ff9a86; /* dark background for nav */
+    background-color: #ff9a86; 
     padding: 10px;
   }
 
@@ -32,13 +32,13 @@ body {
     background-color: peachpuff;
   }
 
-  /* Highlight About Us link */
+  
   promotions-link {
     font-weight: bold;
     
   }
 
-  /* MOOD & BITES is a heading, not a button → no pointer, no hover effect as button */
+  
     .brand-heading {
       font-family: 'Lora', serif;
       font-weight: 700;
@@ -96,7 +96,7 @@ body {
     margin-top: 10px;
   }
 
-  /* Main content styling */
+  
   .content {
     max-width: 800px;
     margin: 20px auto;
@@ -104,7 +104,7 @@ body {
     border-radius: 8px;
   }
 
-    /* Header */
+   
     .header {
       display: flex;
       justify-content: space-between;
@@ -121,7 +121,7 @@ body {
       height: 30px;
       margin-right: 10px;
     }
-    /* Location and icons */
+   
     .top-info {
       display: flex;
       align-items: center;
@@ -130,7 +130,7 @@ body {
       margin-left: 15px;
     }
  
-    /* Container for categories and search */
+    
 .categories-search-container {
   background-color: #ff9a86; 
   padding: 10px 20px; 
@@ -155,19 +155,19 @@ body {
 }
 
 
-/* Container for all categories */
+
 .category-group {
-  display: grid; /* hide by default */
+  display: grid; 
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
 }
-/* Show the active category */
+
 .category-group.active {
   display: flex;
 }
 
-/* Style for menu item cards */
+
 .menu-item {
   background-color: #fff;
   width: 220px;
@@ -223,14 +223,14 @@ body {
   text-align: center;
   font-size: 1.2em;
 }
- /* Footer styles for social icons */
+ 
   footer {
     padding: 20px 0;
     text-align: center;
-    background-color: transparent; /* optional */
+    background-color: transparent; 
   }
 
-/* Add to Cart button style */
+
 .add-to-cart {
   background-color: #e91e63;
   border: none;
@@ -249,7 +249,7 @@ body {
 
 }
 
- /* Social icons */
+ 
   .social-icons {
     display: flex;
     justify-content: center;
@@ -272,7 +272,7 @@ body {
 </head>
 <body>
 
-<!-- Top Navigation -->
+
 <div class="header-menu">
   <div class="nav-container">
   <div class="nav-container">
@@ -416,10 +416,10 @@ body {
 
  <h2>MOOD & BITES</h2>
 
-<!-- Include Font Awesome CSS (if not already included in your <head>) -->
+        <p>&copy; 2024 MOOD & BITES. All rights reserved.</p>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-<!-- Social media icons container -->
+
 <div class="social-icons">
   <a href="https://www.instagram.com/moodandbites/" target="_blank" aria-label="Instagram">
     <i class="fab fa-instagram"></i>
@@ -431,7 +431,7 @@ body {
     <i class="fab fa-facebook"></i>
   </a>
   <a href="https://threads.net/@moodandbites?xmt=AQF0Rcm3Wf-eb-oV8Ceyy8p-WxRQbEjEOCCvQymzX8hVva0" target="_blank" aria-label="Threads">
-    <i class="fab fa-twitter"></i> <!-- Placeholder icon -->
+    <i class="fab fa-twitter"></i> 
   </a>
 </div>
 
@@ -439,14 +439,14 @@ body {
     </footer>
     <script>
  
- // Select all increase/decrease buttons
+ 
 document.querySelectorAll('.increase, .decrease').forEach(button => {
   button.addEventListener('click', () => {
-    // Find the closest parent .menu-item
+    
     const menuItem = button.closest('.menu-item');
-    // Find the quantity span within this menu item
+    
     const qtySpan = menuItem.querySelector('.quantity');
-    // Parse current quantity
+    
     let qty = parseInt(qtySpan.textContent);
     if (button.classList.contains('increase')) {
       qty++;
@@ -455,12 +455,12 @@ document.querySelectorAll('.increase, .decrease').forEach(button => {
         qty--;
       }
     }
-    // Update the display
+    
     qtySpan.textContent = qty;
   });
 });
 
-  // Add to Cart button
+  
   document.querySelector('.add-to-cart').addEventListener('click', function() {
     if (Object.keys(cart).length === 0) {
       alert('Please add items to your cart');

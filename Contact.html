@@ -12,7 +12,7 @@
     }
 
     body {
-      background-color: #ffddd6;   /* soft peach background */
+      background-color: #ffddd6;   
       font-family: 'Segoe UI', Roboto, 'Helvetica Neue', system-ui, -apple-system, sans-serif;
       line-height: 1.5;
       color: #2d2a24;
@@ -23,11 +23,11 @@
       padding: 2rem 1.5rem;
     }
 
-    /* main card container –  */
+    
     .contact-container {
       max-width: 1100px;
       width: 100%;
-      background-color: #fffaf7;   /* barely lighter than peach, natural contrast */
+      background-color: #fffaf7;   
       border-radius: 2rem;
       box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.02);
       overflow: hidden;
@@ -40,7 +40,7 @@
       flex-wrap: wrap;
     }
 
-    /* LEFT SIDE: contact info  */
+    
     .info-panel {
       flex: 1.2;
       background-color: #fff5f0;
@@ -140,7 +140,7 @@
       border-radius: 50px;
     }
 
-    /* RIGHT SIDE: working form – all inputs functional */
+   
     .form-panel {
       flex: 1.5;
       background-color: #ffffff;
@@ -188,7 +188,7 @@
       color: #2d2a24;
     }
 
-    /* focus style – only subtle glow, no visible border-line harshness */
+    
     input:focus, textarea:focus, select:focus {
       border-color: #f0bc9e;
       background-color: #ffffff;
@@ -281,7 +281,7 @@
       display: none;
     }
 
-    /* fully responsive */
+    
     @media (max-width: 760px) {
       .contact-wrapper {
         flex-direction: column;
@@ -301,7 +301,7 @@
 <body>
 <div class="contact-container">
   <div class="contact-wrapper">
-    <!-- LEFT SECTION: Information given (preserved exactly from image / context) -->
+    
     <div class="info-panel">
       <div class="badge-icon">📞 Get in touch</div>
       <h1>Mood & Bites<br></h1>
@@ -309,7 +309,7 @@
         We're here to help and answer any question you might have. We look forward to hearing from you.
       </div>
 
-      <!-- all original details preserved from the reference (CONTACT US.png information) -->
+      
       <div class="contact-details">
         <div class="detail-item">
           <div class="detail-emoji">📍</div>
@@ -345,10 +345,10 @@
         <span>✨ Follow us: @MoodAndBites</span>
         <span>📢 24/7 chat support</span>
       </div>
-      <!-- extra note: all info from the requested image is covered: address, email, phone, etc -->
+      
     </div>
 
-    <!-- RIGHT SECTION: WORKING FORM (everything functional, no borderline) -->
+    
     <div class="form-panel">
       <div class="form-header">
         <h2>Send a message</h2>
@@ -387,7 +387,7 @@
           <label for="newsletter">Subscribe to receive product updates & design inspiration (no spam).</label>
         </div>
 
-        <!-- status container for submit feedback -->
+        
         <div id="formStatus" class="form-status"></div>
 
         <button type="submit" id="submitBtn">Send message →</button>
@@ -401,12 +401,12 @@
 
 <script>
   (function() {
-    // FULLY FUNCTIONAL FORM: captures inputs, validation, interactive feedback
+    
     const form = document.getElementById('contactForm');
     const statusDiv = document.getElementById('formStatus');
     const submitBtn = document.getElementById('submitBtn');
 
-    // Helper to display messages (no borders, just peach-friendly alert)
+    
     function setStatus(message, isError = false) {
       statusDiv.innerHTML = message;
       if (isError) {
@@ -414,7 +414,7 @@
       } else {
         statusDiv.className = 'form-status success-message';
       }
-      // auto clear after 5 seconds for success only, but keep error until next attempt? fine either way.
+     
       if (!isError) {
         setTimeout(() => {
           if (statusDiv.innerHTML === message) {
@@ -425,14 +425,14 @@
       }
     }
 
-    // clear status on new typing maybe? it's ok but we keep it dynamic
+    
     function clearStatus() {
       if (statusDiv.innerHTML !== '') {
-        // don't automatically remove error if user re-types, keep until new submit
+        
       }
     }
 
-    // Attach event listeners to clear error if user starts interacting (optional experience)
+    
     const clearStatusOnInput = () => {
       if (statusDiv.classList.contains('error-message')) {
         statusDiv.innerHTML = '';
@@ -445,11 +445,11 @@
       input.addEventListener('change', clearStatusOnInput);
     });
 
-    // Submit handler: prevent default, validate, show success/error messages
+    
     form.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      // Gather values
+      
       const fullname = document.getElementById('fullname').value.trim();
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
@@ -457,7 +457,7 @@
       const subject = subjectSelect.options[subjectSelect.selectedIndex]?.text || 'General';
       const newsletterChecked = document.getElementById('newsletter').checked;
 
-      // Validation
+      
       if (!fullname) {
         setStatus('❌ Please enter your full name.', true);
         document.getElementById('fullname').focus();
@@ -481,14 +481,12 @@
         return;
       }
 
-      // Simulate successful sending (working front-end form)
-      // In a real scenario we would POST to a backend, but here it's fully functional client-side.
-      // We simulate a successful reply after 100ms to mimic async.
+      
       const btnOriginalText = submitBtn.innerText;
       submitBtn.disabled = true;
       submitBtn.innerText = 'Sending ...';
       
-      // Build simulated data for console / demo transparency
+      
       const formData = {
         fullname,
         email,
@@ -501,24 +499,23 @@
       
       console.log('📬 Contact form submitted (demo):', formData);
       
-      // Fake network delay to show realistic feedback
+      
       setTimeout(() => {
-        // Show success message
+        
         let successMsg = `✨ Thanks ${fullname.split(' ')[0]}! Your message has been delivered. We'll reach out within 24h.`;
         if (newsletterChecked) successMsg += ` (You're subscribed to updates!)`;
         setStatus(successMsg, false);
         
-        // Reset form (optional but recommended after successful submit)
+        
         form.reset();
-        // re-enable button
+       
         submitBtn.disabled = false;
         submitBtn.innerText = btnOriginalText;
         
-        // Clear any leftover error styling after reset
+       
         statusDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         
-        // Remove success after a while (preserve, but keep reset)
-        // Instead of double removal, keep message visible. But we already auto-clear after 5 sec in setStatus (for success)
+        
       }, 600);
     });
   })();

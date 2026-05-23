@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>MOOD & BITES | About Us</title>
   
-  <!-- Font Awesome 6 (free icons) -->
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Google Fonts: Lora + Open Sans for elegant but cozy vibe -->
+  
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
@@ -20,22 +20,21 @@
 
     body {
       font-family: 'Open Sans', sans-serif;
-      background-color: #FFDAB9;     /* warm peach background (compliant with original) */
+      background-color: #FFDAB9;     
       line-height: 1.5;
       color: #2c2418;
     }
 
-    /* main container for consistent spacing */
+   
     .wrapper {
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
-    /* ----- NAVIGATION BAR (modern, elegant, different shade that complements #FFDAB9) ----- */
-    /* background color : a deeper terracotta / warm walnut tone that pairs beautifully with peach */
+    
     .nav-bar {
-      background-color: #9C5A3C;     /* rich warm brown-terracotta shade – compliments peach background perfectly */
+      background-color: #9C5A3C;     
       border-radius: 48px;
       margin: 1.5rem 0 2rem 0;
       padding: 0.75rem 1.8rem;
@@ -43,7 +42,7 @@
       transition: all 0.2s ease;
     }
 
-    /* flex layout for nav items: responsive, centered, with natural gaps */
+    
     .nav-links {
       display: flex;
       flex-wrap: wrap;
@@ -53,12 +52,12 @@
       list-style: none;
     }
 
-    /* each nav item container */
+    
     .nav-links li {
       display: inline-block;
     }
 
-    /* base button style – all clickable navigation items (except static heading) */
+    
     .nav-btn {
       display: inline-block;
       font-family: 'Open Sans', sans-serif;
@@ -69,14 +68,14 @@
       border-radius: 40px;
       text-decoration: none;
       background-color: transparent;
-      color: #FEF3E2;        /* soft off-white for contrast */
+      color: #FEF3E2;        
       transition: all 0.25s ease;
       border: 1px solid transparent;
       text-align: center;
       white-space: nowrap;
     }
 
-    /* hover effect for interactive buttons (subtle light overlay) */
+   
     .nav-btn:not(.brand-heading):hover {
       background-color: rgba(255, 245, 225, 0.2);
       border-color: rgba(255, 245, 225, 0.5);
@@ -84,17 +83,14 @@
       color: #ffffff;
     }
 
-    /* active "About Us" – UNHIGHLIGHTED per request: no special background; just normal style */
-    /* originally there was .about-link with pink background, we remove that highlight.
-       The "about" button remains clean like others, no extra background. */
+    
     .nav-btn.about-active {
-      /* no background override – unhighlighted, but we keep same hover and base look.
-         No pink, no bold background. It appears exactly like other nav buttons. */
-      font-weight: 600;   /* consistent weight, but not visually highlighted as "active page" */
-      /* also no background-color differentiation – user asked "unhighlight the about button" */
+      
+      font-weight: 600;   
+      
     }
 
-    /* MOOD & BITES is a heading, not a button → no pointer, no hover effect as button */
+   
     .brand-heading {
       font-family: 'Lora', serif;
       font-weight: 700;
@@ -109,14 +105,14 @@
       text-shadow: 1px 1px 0 rgba(0,0,0,0.05);
     }
 
-    /* ensure brand heading never behaves like an interactive button */
+    
     .brand-heading:hover {
       background: transparent;
       transform: none;
       border-color: transparent;
     }
 
-    /* optional: fine tune for mobile responsiveness */
+    
     @media (max-width: 780px) {
       .nav-links {
         gap: 0.2rem;
@@ -145,7 +141,7 @@
       }
     }
 
-    /* ----- MAIN CONTENT (about page) elegantly styled ----- */
+    
     .about-hero {
       text-align: center;
       margin: 2rem 0 1rem;
@@ -190,7 +186,7 @@
       font-weight: 400;
     }
 
-    /* Social icons section - vibrant, working links */
+    
     .social-links-section {
       text-align: center;
       margin: 2rem 0 1.5rem;
@@ -236,7 +232,7 @@
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
     }
 
-    /* Extra footer / fine print */
+    
     .signature-line {
       text-align: center;
       font-size: 0.8rem;
@@ -247,12 +243,12 @@
       padding-top: 1.8rem;
     }
 
-    /* interactive button click effect (subtle) */
+    
     .nav-btn:active {
       transform: scale(0.97);
     }
 
-    /* ensure no residual highlight from old .about-link style */
+    
     .about-link {
       background-color: transparent !important;
       font-weight: normal;
@@ -261,21 +257,20 @@
 </head>
 <body>
 <div class="wrapper">
-  <!-- Navigation Bar: all buttons functional, MOOD & BITES is heading not button -->
+  
   <div class="nav-bar">
     <ul class="nav-links">
-      <!-- MOOD & BITES is a heading, not a button: pure text, no href, no click behavior -->
-      <!-- MOOD & BITES is a heading, not a button: pure text, no href, no click behavior -->
+      
       <li><span class="nav-btn brand-heading">MOOD & BITES</span></li>
-      <!-- HOMEPAGE button - leads to index.html (working) -->
+      <!
       <li><a href="index.html" class="nav-btn">HOMEPAGE</a></li>
-      <!-- ABOUT US - unhighlighted (no background highlight) just a normal nav button -->
+      
       <li><a href="about.html" class="nav-btn about-active">ABOUT US</a></li>
     
     </ul>
   </div>
 
-  <!-- main about content area -->
+  
   <div class="about-hero">
     <h1>about us</h1>
   </div>
@@ -294,7 +289,6 @@
     <p>At Mood & Bites, we believe that food is more than just sustenance — it's an experience. Our menu features thoughtfully crafted dishes, specialty coffee, and seasonal treats, all designed to match your mood. We focus on quality, freshness, and creating a warm environment where every visit leaves you feeling good. From mood-boosting smoothie bowls to indulgent pasta, every bite is made with intention.</p>
   </div>
 
-  <!-- SOCIAL ICONS group - fully functional, opens real links in new tabs -->
   <div class="social-links-section">
     <div class="social-label">find your mood with us</div>
     <div class="social-icons">
@@ -302,7 +296,7 @@
       <a href="https://www.tiktok.com/@moodandbites" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
       <a href="https://www.facebook.com/moodandbites" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="https://www.threads.net/@moodandbites" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fab fa-twitter"></i></a>
-      <!-- also optionally add an email or other, but the requirement only says leave social icons working, above 4 all good -->
+      
     </div>
   </div>
   <div class="signature-line">
@@ -310,36 +304,19 @@
   </div>
 </div>
 
-<!-- small script to make sure ALL navigation bar buttons are fully interactive and working.
-     For demonstration, we handle "MENU", "PROMOTIONS", "ORDER ONLINE", "CONTACT US" elegantly
-     with smooth alerts that don't break style, but also keep the ability to add real pages later.
-     Also HOMEPAGE remains a proper link to index.html (functionality default). ABOUT US is on same page but active link.
-     The requirement: "make sure all the buttons of the navigation bar are working" – all interactive elements
-     must respond to user clicks and do something meaningful (navigation or appropriate UI feedback) -->
+
 <script>
   (function() {
-    // Helper: show a brief non-intrusive notification that these sections are ready for future update.
-    // But also we can provide smooth demo feedback - since actual full menu, promotions etc pages not provided,
-    // the requirement expects that all buttons perform like real navigation or indicate action.
-    // For a full website these would link to actual pages. We implement consistent behavior: 
-    // show a small toast/modal? Better: use friendly alert once, but not annoying. We use modern inline message.
-    // Alternatively we can redirect to placeholder sections? We'll create a clean simulated "page coming soon" message using a lightweight
-    // non-blocking dialog. However to meet 'working buttons', they must trigger interaction and not be dead.
-    // we reframe: For MENU, PROMOTIONS, ORDER ONLINE, CONTACT US we'll open a discreet mini-notification 
-    // that does not disrupt UX but confirms button is working.
-    // Additionally we want to maintain that all nav buttons except heading are clickable and function.
-    // Also HOMEPAGE link points to index.html (if not exists, still will try to navigate but fine). 
-    // ABOUT US points to about.html (current page). 
-    // We also ensure MOOD & BITES heading does nothing – no click.
+   
     
     const menuBtn = document.getElementById('menuBtn');
     const promoBtn = document.getElementById('promoBtn');
     const orderBtn = document.getElementById('orderBtn');
     const contactBtn = document.getElementById('contactBtn');
     
-    // Helper to show a temporary floating message (avoids intrusive alert box but indicates action)
+    
     function showFloatingMessage(message, isError = false) {
-      // create toast element
+     
       const toast = document.createElement('div');
       toast.innerText = message;
       toast.style.position = 'fixed';
@@ -368,7 +345,7 @@
       }, 2200);
     }
     
-    // attach working event listeners for placeholder buttons
+   
     if (menuBtn) {
       menuBtn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -394,54 +371,32 @@
       });
     }
     
-    // Also ensure that any other potential nav buttons with hash link don't cause page jump. The HOMEPAGE already points to index.html.
-    // This is functional. For robustness, check '#': we covered menu, promo, order, contact.
-    // Also, about and homepage links are fine. MOOD & BITES brand heading should not react. So we disable any click event on that span.
+    
     const brandElem = document.querySelector('.brand-heading');
     if (brandElem && brandElem.parentElement) {
       brandElem.style.cursor = 'default';
       brandElem.addEventListener('click', function(ev) {
         ev.preventDefault();
         ev.stopPropagation();
-        // do nothing – heading is not a button
+        
         return false;
       });
-      // ensure it's not treated as link
+      
       brandElem.setAttribute('aria-label', 'Brand heading, not a button');
     }
     
-    // Additionally, we ensure all other anchor nav buttons have functional hand cursor & no dead links: fine.
-    // For extra finesse: if HOMEPAGE link fails due to missing index.html we optionally prevent error but it's fine.
-    // ensure social icons open the correct urls and all working.
-    // All social icons already have target="_blank" and correct links.
-    
-    // Additional polish: about page currently active but background color of nav bar is a different shade that complements background.
-    // The requirement: "background color must be a different shade or color that compliment the background color the first Mood & bite is a heading not a button"
-    // Already nav-bar background is #9C5A3C (rich terracotta) which compliments peach #FFDAB9 perfectly. Also "unhighlight the about button nav background color must be a different shade" 
-    // We guarantee that about button has NO extra background highlighter or pink. It blends with normal navigation buttons.
-    // Also no background highlight for about link: we completely removed any special background. Using .about-active only to denote but without any highlight style.
-    // Just to double check: previous existing .about-link background-color removed by style rule .about-link background transparent!important.
+   
     const aboutLink = document.querySelector('a.nav-btn.about-active');
     if (aboutLink) {
       aboutLink.style.backgroundColor = 'transparent';
       aboutLink.style.fontWeight = '600';
-      // no extra background, matches other nav buttons style exactly
+      
     }
     
-    // Final check for any residual 'pink' effect: explicitly remove pink from any element.
-    // Extra safety - all nav-btn background transparent by default, never pink.
-    
-    // For mobile / viewport neatness, also leave responsive.
-    
-    // To satisfy "make sure all the buttons of the navigation bar are working" - all interactive elements:
-    //  HOMEPAGE (link to index.html), ABOUT US (link to about.html), MENU, PROMOTIONS, ORDER ONLINE, CONTACT US each have click handlers
-    // plus default link behavior for those with href. The placeholder buttons not redirecting but give clear feedback so user knows it's functional.
-    // Social icons fully working as external links.
-    
-    // also for any future anchor that might have undefined, we ensure that all nav-links a elements work.
+  
     console.log('Navigation fully interactive — brand heading is static, all buttons responsive, socials active.');
   })();
 </script>
-<!-- ensure accessibility and that background color complement: body background peachpuff (#FFDAB9) vs nav bar (#9C5A3C) which is a deeper terracotta, beautiful harmony -->
+
 </body>
 </html>

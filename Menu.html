@@ -21,7 +21,7 @@ body {
   background-color: #FFDAB9;
 }
 
-/* Navigation styles */
+
 .nav-container {
   display: flex;
   justify-content: center;
@@ -63,7 +63,7 @@ body {
       text-shadow: 1px 1px 0 rgba(0,0,0,0.05);
     }
 
-/* Header area */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -92,7 +92,7 @@ body {
   margin-left: 15px;
 }
 
-/* Categories container styling */
+
 .categories-search-container {
   background-color: #ff9a86;
   padding: 15px 20px;
@@ -100,7 +100,7 @@ body {
   text-align: center;
 }
 
-/* Category Buttons */
+
 .category-btn {
   border: none;
   border-radius: 40px;
@@ -127,7 +127,7 @@ body {
   box-shadow: 0 2px 8px rgba(233,30,99,0.3);
 }
 
-/* Search Bar */
+
 .search-bar {
   padding: 5px 20px 20px 20px;
   background-color: #ff9a86;
@@ -151,14 +151,14 @@ body {
   box-shadow: 0 0 0 2px #e91e63;
 }
 
-/* Items grid container */
+
 .items-container {
   max-width: 1300px;
   margin: 30px auto;
   padding: 0 20px;
 }
 
-/* Category group - grid layout */
+
 .category-group {
   display: none; 
   flex-wrap: wrap;
@@ -170,7 +170,7 @@ body {
   display: flex;
 }
 
-/* menu-item card */
+
 .menu-item {
   background-color: #fff;
   width: 260px;
@@ -280,7 +280,7 @@ body {
   transform: scale(1.02);
 }
 
-/* Social Icons */
+
 .social-icons {
   display: flex;
   justify-content: center;
@@ -301,7 +301,7 @@ body {
   transform: translateY(-3px);
 }
 
-/* responsive */
+
 @media (max-width: 700px) {
   .category-btn {
     padding: 6px 18px;
@@ -317,7 +317,7 @@ body {
   }
 }
 
-/* ========== ORDER REVIEW STYLES (from page 2) ========== */
+
 .review-body {
   background-color: #fde9df;
   background: linear-gradient(145deg, #ffe6d9 0%, #ffd9c6 100%);
@@ -593,7 +593,7 @@ body {
   font-weight: 500;
 }
 
-/* ========== PAYMENT PAGE STYLES (from page 3) ========== */
+
 .payment-body {
   background-color: #fde9df;
   min-height: 100vh;
@@ -791,7 +791,7 @@ input[type="radio"], input[type="checkbox"] {
   opacity: 1;
 }
 
-/* Page visibility  */
+
 .page {
   display: none;
 }
@@ -800,7 +800,7 @@ input[type="radio"], input[type="checkbox"] {
   display: block;
 }
 
-/* Navigation buttons between pages */
+
 .nav-buttons {
   position: fixed;
   bottom: 20px;
@@ -837,16 +837,14 @@ input[type="radio"], input[type="checkbox"] {
 </head>
 <body>
 
-<!-- Navigation buttons to switch pages -->
+
 <div class="nav-buttons">
   <button class="nav-btn-page" onclick="showPage('menu')">🍽️ MENU</button>
   <button class="nav-btn-page go-to-review-btn" onclick="showPage('review')">📋 ORDER REVIEW</button>
   <button class="nav-btn-page" onclick="showPage('payment')">💳 PAYMENT</button>
 </div>
 
-<!-- ============================================================ -->
-<!-- PAGE 1: MENU PAGE (original, structure) -->
-<!-- ============================================================ -->
+
 <div id="menuPage" class="page active-page">
 <div class="header-menu">
   <div class="nav-container">
@@ -1007,9 +1005,7 @@ input[type="radio"], input[type="checkbox"] {
 </div>
 </div>
 
-<!-- ============================================================ -->
-<!-- PAGE 2: ORDER REVIEW PAGE (unchanged structure) -->
-<!-- ============================================================ -->
+
 <div id="reviewPage" class="page">
 <div class="review-body" style="background-color: #fde9df; background: linear-gradient(145deg, #ffe6d9 0%, #ffd9c6 100%); min-height: 100vh; padding: 2rem 1.5rem;">
 <div class="review-container">
@@ -1045,9 +1041,7 @@ input[type="radio"], input[type="checkbox"] {
 </div>
 </div>
 
-<!-- ============================================================ -->
-<!-- PAGE 3: PAYMENT PAGE  -->
-<!-- ============================================================ -->
+
 <div id="paymentPage" class="page">
 <div class="payment-body" style="background-color: #fde9df; min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 1.5rem;">
 <div class="payment-container">
@@ -1127,10 +1121,10 @@ input[type="radio"], input[type="checkbox"] {
 </div>
 
 <script>
-// ========== GLOBAL CART VARIABLE ==========
+
 let cartItems = [];
 
-// ========== PAGE NAVIGATION ==========
+
 function showPage(pageId) {
   // Hide all pages
   document.querySelectorAll('.page').forEach(page => {
@@ -1139,13 +1133,13 @@ function showPage(pageId) {
   // Show selected page
   document.getElementById(pageId + 'Page').classList.add('active-page');
   
-  // If showing review page, refresh the cart display
+ 
   if (pageId === 'review') {
     renderReviewCart();
   }
 }
 
-// ========== COLLECT SELECTED ITEMS FROM MENU ==========
+
 function collectSelectedItems() {
   const items = [];
   document.querySelectorAll('#menuPage .menu-item').forEach(item => {
@@ -1166,7 +1160,7 @@ function collectSelectedItems() {
   return items;
 }
 
-// ========== SAVE/LOAD CART ==========
+
 function saveCartToStorage() {
   localStorage.setItem('moodBites_cart', JSON.stringify(cartItems));
 }
@@ -1185,7 +1179,7 @@ function loadCartFromStorage() {
   cartItems = [];
 }
 
-// ========== REVIEW PAGE RENDER ==========
+
 function renderReviewCart() {
   const container = document.getElementById('cartItemsContainer');
   const totalSpan = document.getElementById('totalAmountDisplay');
@@ -1224,7 +1218,7 @@ function renderReviewCart() {
   container.innerHTML = html;
   if (totalSpan) totalSpan.innerText = 'R ' + total.toFixed(2);
   
-  // Attach event listeners for review page buttons
+  
   document.querySelectorAll('#reviewPage .decr').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const id = btn.getAttribute('data-id');
@@ -1265,7 +1259,7 @@ function removeItemById(itemId) {
   renderReviewCart();
 }
 
-// ========== ADD TO CART FROM MENU ==========
+
 document.getElementById('orderAlertBtn').addEventListener('click', () => {
   const selectedItems = collectSelectedItems();
   if (selectedItems.length === 0) {
@@ -1273,7 +1267,7 @@ document.getElementById('orderAlertBtn').addEventListener('click', () => {
     return;
   }
   
-  // Merge with existing cart
+  
   selectedItems.forEach(newItem => {
     const existing = cartItems.find(i => i.name === newItem.name);
     if (existing) {
@@ -1294,7 +1288,7 @@ document.getElementById('orderAlertBtn').addEventListener('click', () => {
   });
 });
 
-// ========== CHECKOUT BUTTON (go to payment) ==========
+
 document.getElementById('checkoutBtn').addEventListener('click', () => {
   if (cartItems.length === 0) {
     alert("🧾 Your cart is empty! Add some delicious items before checkout.");
@@ -1303,7 +1297,7 @@ document.getElementById('checkoutBtn').addEventListener('click', () => {
   showPage('payment');
 });
 
-// ========== CONFIRM PAY BUTTON ==========
+
 function showToast(message) {
   const toast = document.getElementById('toastMsg');
   toast.textContent = message || '✨ Payment successful! Thank you ✨';
@@ -1386,7 +1380,7 @@ if (confirmPayBtn) {
     
     showToast('🇿🇦 Payment confirmed! Your order is being processed. 🍑');
     
-    // Clear cart after successful payment
+    
     setTimeout(() => {
       cartItems = [];
       saveCartToStorage();
@@ -1394,7 +1388,7 @@ if (confirmPayBtn) {
   });
 }
 
-// ========== MENU CATEGORY & SEARCH (unchanged from original) ==========
+
 const catBtns = document.querySelectorAll('#menuPage .category-btn');
 const allGroups = document.querySelectorAll('#menuPage .category-group');
 
@@ -1430,7 +1424,7 @@ function initQuantityControls() {
     const incBtn = item.querySelector('.increase');
     const decBtn = item.querySelector('.decrease');
     if (!incBtn || !decBtn) return;
-    // Remove old listeners to avoid duplicates
+    
     const newInc = incBtn.cloneNode(true);
     const newDec = decBtn.cloneNode(true);
     incBtn.parentNode.replaceChild(newInc, incBtn);
@@ -1479,19 +1473,19 @@ if (searchInputEl) {
 initQuantityControls();
 performSearch();
 
-// When adding item to cart
+
 function addItemToCart(item, isPromotion = false) {
   cart.items.push({ ...item, isPromotion });
 }
 
-// When displaying order review
+
 function displayOrderReview() {
   cart.items.forEach(item => {
-    // Render item
+    
   });
 }
 
-// ========== PAYMENT PAGE TOGGLE DELIVERY ==========
+
 const pickupRadio = document.getElementById('pickupRadio');
 const deliveryRadioPay = document.getElementById('deliveryRadio');
 const deliveryBlock = document.getElementById('deliveryDetailsBlock');
@@ -1514,7 +1508,7 @@ if (pickupRadio && deliveryRadioPay) {
   toggleDeliverySection();
 }
 
-// Card number formatting
+
 const cardNumberInputPay = document.getElementById('cardNumber');
 if (cardNumberInputPay) {
   cardNumberInputPay.addEventListener('input', function(e) {
@@ -1563,7 +1557,7 @@ if (phoneInputPay) {
   });
 }
 
-// Load saved cart on startup
+
 loadCartFromStorage();
 showPage('menu');
 </script>
