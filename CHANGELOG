@@ -1,1 +1,195 @@
+# Changelog
 
+## [Part 2] CSS Styling & Responsive Design - May 16 to May 27, 2026
+
+### May 16, 2026
+
+#### Added
+- Created external CSS file (style.css) and linked to all HTML pages
+- Added CSS reset for cross-browser consistency (`* { margin:0; padding:0; box-sizing }`)
+
+#### Changed
+- Set body background color to match requirements
+
+---
+
+### May 17, 2026
+
+#### Added
+- Added typography scale using rem units (h1: 2.5rem, h2: 2rem, h3: 1.75rem, h4: 1.5rem, p: 1rem)
+- Added Google Fonts integration (Lora for headings, Open Sans for body)
+
+#### Fixed
+- Corrected font family declarations across all pages
+
+---
+
+### May 18, 2026
+
+#### Added
+- Added CSS Grid layout for desktop (3-column grid using `grid-template-columns: repeat(3, 1fr)`)
+- Added 2-column grid layout for secondary pages
+
+#### Changed
+- Updated navigation bar background to light peachy-pink (#FFB6A4)
+- Changed navigation text color to white (#FFFFFF)
+- Changed navigation font to 'Lora', serif
+
+---
+
+### May 19, 2026
+
+#### Added
+- Added hover pseudo-class effects for navigation buttons (background change, transform)
+- Added active pseudo-class effects (scale transform)
+- Added focus pseudo-class for accessibility (outline on focus)
+
+#### Fixed
+- Removed duplicate .brand-heading selectors (was defined 3 times)
+- Removed duplicate .social-icons selectors (was defined twice)
+
+---
+
+### May 20, 2026
+
+#### Added
+- Added responsive breakpoints:
+  - Desktop: > 1024px (3 columns)
+  - Tablet: 768px - 1024px (2 columns)
+  - Mobile: < 768px (1 column, stacked navigation)
+  - Small mobile: < 480px (extra adjustments)
+
+#### Changed
+- Standardized inconsistent breakpoints (was 780px, 760px, 700px, 650px, 620px → now 1024px, 768px, 480px)
+
+---
+
+### May 21, 2026
+
+#### Added
+- Added relative units (rem for fonts, % for widths) for responsive design
+- Added responsive image support (`max-width: 100%; height: auto;`)
+
+#### Changed
+- Converted pixel-based font sizes to rem-based typography scale
+
+---
+
+### May 22, 2026
+
+#### Changed
+- Unified navigation bar styling across all pages (Home, About, Menu, Promotions, Contact)
+- Made peachy-pink navigation consistent throughout website
+
+#### Fixed
+- Corrected menu page grid display issue (items now display in proper grid layout)
+- Fixed category filter buttons styling
+
+---
+
+### May 23, 2026
+
+#### Changed
+- Applied Peach Puff (#FFDAB9) background color to all pages consistently
+
+#### Fixed
+- Removed conflicting background gradients that overrode the peach color
+- Ensured body background applies to all pages
+
+---
+
+### May 24, 2026
+
+#### Added
+- Added CSS Grid examples to demonstrate layout requirements
+- Added flexbox components for consistent spacing
+
+#### Fixed
+- Fixed menu item card sizing (consistent width of 280px)
+- Fixed quantity control buttons styling
+
+---
+
+### May 25, 2026
+
+#### Changed
+- Updated all navigation links to use consistent hover effects
+- Improved mobile navigation (stacks vertically on screens < 768px)
+
+#### Fixed
+- Resolved issue with multi-column to single-column transition on mobile
+
+---
+
+### May 26, 2026
+
+#### Added
+- Created screenshots folder for evidence
+- Took screenshots of website on:
+  - Desktop (1920×1080) - 3-column layout
+  - Tablet (768×1024) - 2-column layout
+  - Mobile (375×667) - 1-column layout, stacked navigation
+
+#### Changed
+- Updated README.md with screenshot links and changelog
+
+---
+
+### May 27, 2026
+
+#### Added
+- Added final documentation to README.md:
+  - Changelog entries for all changes
+  - Screenshot evidence with paths
+  - Testing checklist
+
+#### Fixed
+- Corrected screenshot file paths in README.md
+- Fixed folder structure (moved screenshots to main level)
+
+#### Changed
+- Moved style.css from css folder to main project folder
+- Deleted empty css folder
+- Consolidated CHANGELOG content into README.md
+
+---
+
+## Summary of PDF Requirements Met
+
+| Requirement | Section | Status |
+|-------------|---------|--------|
+| External CSS file | 2.1 |  Complete |
+| CSS reset | 2.2 |  Complete |
+| Typography scale | 2.3 |  Complete |
+| CSS Grid layout | 2.4 |  Complete |
+| Flexbox layout | 2.4 |  Complete |
+| Hover, focus, active pseudo-classes | 2.5 |  Complete |
+| Responsive breakpoints | 3.1 |  Complete |
+| Multi→single column layout | 3.1 |  Complete |
+| Relative units (rem, %) | 3.2 |  Complete |
+| Responsive images | 3.3 |  Complete (HTML ready) |
+| Screenshot evidence | 3.4 |  Complete |
+
+---
+
+## Files Modified
+
+- `style.css` - Complete restructure and optimization
+- `index.html` - Linked to updated CSS
+- `about.html` - Linked to updated CSS
+- `menu.html` - Linked to updated CSS
+- `promotions.html` - Linked to updated CSS
+- `contact.html` - Linked to updated CSS
+- `privacy.html` - Linked to updated CSS
+- `README.md` - Added changelog and screenshot evidence
+
+## Files Created
+
+- `screenshots/desktop.png` - Desktop view evidence
+- `screenshots/tablet.png` - Tablet view evidence
+- `screenshots/mobile.png` - Mobile view evidence
+
+## Files Deleted
+
+- `CHANGELOG` - Content moved to README.md
+- `css/` folder - style.css moved to main folder
