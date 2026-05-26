@@ -1,27 +1,20 @@
-/* ========================================
-   GLOBAL & UNIVERSAL STYLES (CSS RESET)
-   ======================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* ========================================
-   BASE BODY & TYPOGRAPHY (PDF 2.2 & 2.3)
-   ======================================== */
 html {
-  font-size: 16px; /* Base for rem units - PDF 3.2 */
+  font-size: 16px; 
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #FFDAB9; /* Peach Puff background */
+  background-color: #FFDAB9; 
   line-height: 1.5;
   color: #2c2418;
 }
 
-/* Typography Scale (PDF 2.3 - harmonious typography) */
+
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -48,11 +41,9 @@ p {
   line-height: 1.6;
 }
 
-/* ========================================
-   UNIFIED NAVIGATION BAR (Peachy-Pink)
-   ======================================== */
+
 .nav-bar {
-  background-color: #FFB6A4; /* Light peachy-pink */
+  background-color: #FFB6A4; 
   padding: 1rem 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -85,7 +76,7 @@ p {
   border: 1px solid transparent;
 }
 
-/* PDF 2.5 - Hover pseudo-class */
+
 .nav-btn:hover {
   background-color: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.5);
@@ -93,12 +84,12 @@ p {
   color: #ffffff;
 }
 
-/* PDF 2.5 - Active pseudo-class */
+
 .nav-btn:active {
   transform: scale(0.97);
 }
 
-/* PDF 2.5 - Focus pseudo-class (accessibility) */
+
 .nav-btn:focus {
   outline: 2px solid white;
   outline-offset: 2px;
@@ -118,16 +109,14 @@ p {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
 }
 
-/* ========================================
-   CSS GRID LAYOUT (PDF 2.4 - REQUIRED)
-   ======================================== */
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* 3-column grid for desktop */
+
 .grid-layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -143,9 +132,7 @@ p {
   margin: 2rem 0;
 }
 
-/* ========================================
-   EXISTING STYLES (KEPT AS IS)
-   ======================================== */
+
 .nav-container {
   display: flex;
   justify-content: center;
@@ -254,9 +241,7 @@ p {
   margin-left: 15px;
 }
 
-/* ========================================
-   CATEGORY & SEARCH (KEPT AS IS)
-   ======================================== */
+
 .categories-search-container {
   background-color: #FFB6A4;
   padding: 10px 20px;
@@ -291,9 +276,7 @@ p {
   display: flex;
 }
 
-/* ========================================
-   MENU ITEMS (KEPT AS IS)
-   ======================================== */
+
 .menu-item {
   background-color: #fff;
   width: 220px;
@@ -357,9 +340,7 @@ p {
   font-size: 1.2em;
 }
 
-/* ========================================
-   ADD TO CART BUTTON (UNTOUCHED)
-   ======================================== */
+
 .add-to-cart {
   background-color: #e91e63;
   border: none;
@@ -377,9 +358,7 @@ p {
   background-color: #e91e63;
 }
 
-/* ========================================
-   FOOTER & SOCIAL ICONS
-   ======================================== */
+
 footer {
   padding: 20px 0;
   text-align: center;
@@ -403,9 +382,7 @@ footer {
   color: #555;
 }
 
-/* ========================================
-   ABOUT US PAGE (CROISSANT DESIGN - KEPT)
-   ======================================== */
+
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -448,9 +425,6 @@ footer {
   margin-top: 0;
 }
 
-/* ========================================
-   MENU PAGE EXTENDED STYLES (KEPT)
-   ======================================== */
 .items-container {
   max-width: 1300px;
   margin: 30px auto;
@@ -491,7 +465,7 @@ footer {
   box-shadow: 0 0 0 2px #e91e63;
 }
 
-/* ADD TO CART BUTTON (UNTOUCHED) */
+
 .add-to-cart-btn {
   background-color: #e91e63;
   color: white;
@@ -516,9 +490,7 @@ footer {
   margin: 30px 0 40px;
 }
 
-/* ========================================
-   REVIEW/ORDER PAGE (UNTOUCHED)
-   ======================================== */
+
 .review-body {
   background-color: #fde9df;
   background: linear-gradient(145deg, #ffe6d9 0%, #ffd9c6 100%);
@@ -589,9 +561,7 @@ footer {
   transform: scale(0.99);
 }
 
-/* ========================================
-   PAYMENT PAGE (UNTOUCHED)
-   ======================================== */
+
 .payment-body {
   background-color: #fde9df;
   min-height: 100vh;
@@ -626,9 +596,7 @@ footer {
   transform: scale(0.99);
 }
 
-/* ========================================
-   CONTACT US PAGE (UNTOUCHED)
-   ======================================== */
+
 .contact-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -646,9 +614,6 @@ footer {
   padding: 2.5rem 2rem;
 }
 
-/* ========================================
-   RESPONSIVE IMAGES (PDF 3.3)
-   ======================================== */
 img {
   max-width: 100%;
   height: auto;
@@ -661,11 +626,7 @@ img {
   object-fit: cover;
 }
 
-/* ========================================
-   RESPONSIVE DESIGN - MEDIA QUERIES (PDF 3.1)
-   ======================================== */
 
-/* Tablet (768px - 1024px) */
 @media (max-width: 1024px) {
   html {
     font-size: 15px;
@@ -691,7 +652,6 @@ img {
   }
 }
 
-/* Mobile (481px - 767px) - Single column layout */
 @media (max-width: 768px) {
   html {
     font-size: 14px;
@@ -717,7 +677,7 @@ img {
     margin-bottom: 0.5rem;
   }
   
-  /* Single column layout for mobile - PDF 3.1 requirement */
+  
   .grid-layout {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -754,7 +714,7 @@ img {
   }
 }
 
-/* Small Mobile (up to 480px) */
+
 @media (max-width: 480px) {
   html {
     font-size: 13px;
@@ -775,9 +735,7 @@ img {
   }
 }
 
-/* ========================================
-   UTILITY CLASSES
-   ======================================== */
+
 .text-center {
   text-align: center;
 }
@@ -789,3 +747,4 @@ img {
 .mt-2 { margin-top: 1rem; }
 .mb-2 { margin-bottom: 1rem; }
 .p-2 { padding: 1rem; }
+
