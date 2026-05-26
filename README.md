@@ -99,4 +99,44 @@ W3Schools. 2026. *How To Create a Responsive Top Navigation Menu*. Available at:
 ### Unusable Sources (Documented per assignment requirements)
 - TikTok (@moodandbites): Attempted to access but the page displays a service discontinuation notice for Hong Kong. No usable content could be retrieved.
 - Instagram (@moodandbites): Attempted to access but returned an access error (Status 429). Content could not be retrieved.
-- 
+
+  # MOOD & BITES - WEDE Part 2
+
+## Changelog
+
+### Changes Made (Date: 27/05/2026)
+
+1. **Background Color**: Changed to Peach Puff (#FFDAB9)
+2. **Navigation Bar**: Updated to peachy-pink (#FFB6A4) with 'Lora' font
+3. **CSS Grid**: Added 3-column layout for desktop
+4. **Responsive Design**: Added breakpoints at 1024px, 768px, 480px
+5. **Mobile Layout**: Navigation stacks vertically, grid changes to 1-column
+
+## Screenshot Evidence (PDF 3.4)
+
+### Desktop View (1920×1080)
+![Desktop Screenshot](screenshots/desktop.png)
+
+### Tablet View (768×1024)
+![Tablet Screenshot](screenshots/tablet.png)
+
+### Mobile View (375×667)
+![Mobile Screenshot](screenshots/mobile.png)
+
+## Testing Results
+
+| Device | Navigation | Grid Layout | Status |
+|--------|-----------|-------------|--------|
+| Desktop | Horizontal | 3 columns | working |
+| Tablet | Horizontal | 2 columns | working|
+| Mobile | Vertical (stacked) | 1 column | working|
+
+## Verification Checklist
+
+- [x] Peach puff background (#FFDAB9)
+- [x] Peachy-pink navigation (#FFB6A4)
+- [x] 'Lora' font on navigation
+- [x] CSS Grid implemented
+- [x] Media queries working
+- [x] Mobile navigation stacks vertically
+- [x] Screenshots attached above
