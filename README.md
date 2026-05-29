@@ -119,7 +119,7 @@ https://github.com/Thandekile0303/WEDE-PART-1-PRACTISE/blob/main/Screenshots/Ind
 https://github.com/Thandekile0303/WEDE-PART-1-PRACTISE/blob/main/Screenshots/MENU%20PC.png
 
 ### Tablet View (768×1024)
-![Tablet Screenshot](screenshots/tablet.png)
+https://github.com/Thandekile0303/WEDE-PART-1-PRACTISE/blob/main/Screenshots/menu%202%20grid.png
 
 ### Mobile View (375×667)
 ![Mobile Screenshot](screenshots/mobile.png)
