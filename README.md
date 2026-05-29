@@ -123,7 +123,7 @@ https://github.com/Thandekile0303/WEDE-PART-1-PRACTISE/blob/main/Screenshots/men
 https://github.com/Thandekile0303/WEDE-PART-1-PRACTISE/blob/main/Screenshots/Homepage.png
 
 ### Mobile View (375×667)
-![Mobile Screenshot](screenshots/mobile.png)
+https://github.com/Thandekile0303/WEDE-PART-1-PRACTISE/blob/main/Screenshots/menu%202.png
 
 ## Testing Results
 
