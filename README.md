@@ -115,7 +115,7 @@ W3Schools. 2026. *How To Create a Responsive Top Navigation Menu*. Available at:
 ## Screenshot Evidence (PDF 3.4)
 
 ### Desktop View (1920×1080)
-![Desktop Screenshot](screenshots/desktop.png)
+https://github.com/Thandekile0303/WEDE-PART-1-PRACTISE/blob/main/Screenshots/Index%20page%20PC.png
 
 ### Tablet View (768×1024)
 ![Tablet Screenshot](screenshots/tablet.png)
