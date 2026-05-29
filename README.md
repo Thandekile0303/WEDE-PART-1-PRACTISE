@@ -124,6 +124,7 @@ https://github.com/Thandekile0303/WEDE-PART-1-PRACTISE/blob/main/Screenshots/Hom
 
 ### Mobile View (375×667)
 https://github.com/Thandekile0303/WEDE-PART-1-PRACTISE/blob/main/Screenshots/menu%202.png
+https://github.com/Thandekile0303/WEDE-PART-1-PRACTISE/blob/main/Screenshots/promon2.png
 
 ## Testing Results
 
