@@ -5,13 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>MOOD & BITES | About Us</title>
-  
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
  
 </head>
 <body>
@@ -69,99 +65,7 @@
   </div>
 </div>
 
-
-<script>
-  (function() {
-   
-    
-    const menuBtn = document.getElementById('menuBtn');
-    const promoBtn = document.getElementById('promoBtn');
-    const orderBtn = document.getElementById('orderBtn');
-    const contactBtn = document.getElementById('contactBtn');
-    
-    
-    function showFloatingMessage(message, isError = false) {
-     
-      const toast = document.createElement('div');
-      toast.innerText = message;
-      toast.style.position = 'fixed';
-      toast.style.bottom = '25px';
-      toast.style.left = '50%';
-      toast.style.transform = 'translateX(-50%)';
-      toast.style.backgroundColor = '#9C5A3C';
-      toast.style.color = '#FFF6EA';
-      toast.style.padding = '12px 24px';
-      toast.style.borderRadius = '60px';
-      toast.style.fontFamily = "'Open Sans', sans-serif";
-      toast.style.fontWeight = '600';
-      toast.style.fontSize = '0.9rem';
-      toast.style.zIndex = '9999';
-      toast.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
-      toast.style.backdropFilter = 'blur(4px)';
-      toast.style.border = '1px solid rgba(255,245,210,0.5)';
-      toast.style.letterSpacing = '0.3px';
-      document.body.appendChild(toast);
-      setTimeout(() => {
-        toast.style.opacity = '0';
-        toast.style.transition = 'opacity 0.3s ease';
-        setTimeout(() => {
-          if (toast.parentNode) toast.parentNode.removeChild(toast);
-        }, 300);
-      }, 2200);
-    }
-    
-   
-    if (menuBtn) {
-      menuBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        showFloatingMessage('✨ Our delicious MENU is loading soon — stay hungry! ✨');
-      });
-    }
-    if (promoBtn) {
-      promoBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        showFloatingMessage('🎉 PROMOTIONS & weekly specials coming — get ready for tasty deals! 🎉');
-      });
-    }
-    if (orderBtn) {
-      orderBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        showFloatingMessage('🛵 ORDER ONLINE will be activated shortly — quick bites to your door! 🛵');
-      });
-    }
-    if (contactBtn) {
-      contactBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        showFloatingMessage('📞 CONTACT US: (555) 123-BITE | hello@moodandbites.com | We’d love to hear from you! 📞');
-      });
-    }
-    
-    
-    const brandElem = document.querySelector('.brand-heading');
-    if (brandElem && brandElem.parentElement) {
-      brandElem.style.cursor = 'default';
-      brandElem.addEventListener('click', function(ev) {
-        ev.preventDefault();
-        ev.stopPropagation();
-        
-        return false;
-      });
-      
-      brandElem.setAttribute('aria-label', 'Brand heading, not a button');
-    }
-    
-   
-    const aboutLink = document.querySelector('a.nav-btn.about-active');
-    if (aboutLink) {
-      aboutLink.style.backgroundColor = 'transparent';
-      aboutLink.style.fontWeight = '600';
-      
-    }
-    
-  
-    console.log('Navigation fully interactive — brand heading is static, all buttons responsive, socials active.');
-  })();
-</script>
+<script src="javascript/script.js"></script>
 
 </body>
 </html>

@@ -29,11 +29,13 @@
   We offer innovative promotions that are seasonal & diverse in variety. By partnering with trending lifestyle brands, we keep our customers engaged with fresh product innovations & dynamic brand partnerships.
 </div>
 
-
+<div class="menu-item promo-item" data-item-name="Promo Item" data-item-price="50.00">
+  
+</div>
 <div class="items-container" id="itemsContainer">
-<!-- Category Sections -->
+
 <div class="category-group" data-category="coffles" style="display:flex;">
-  <!-- Coffee Items -->
+  
   <div class="menu-item" data-item-name="Banana Nutella Premium Croffles" data-item-price="77.55">
     <img src="IMAGES.html/croffles/banana nutella premium croffles.webp" alt="Banana Nutella Premium Croffles" />
     <div class="menu-item-details">
@@ -50,7 +52,7 @@
     </div>
   </div>
 
-<!-- Item: Biscoff Premium Croffles -->
+
   <div class="menu-item" data-item-name="Biscoff Premium Croffles" data-item-price="77.55">
     <img src="IMAGES.html/croffles/biscoff premuim coffles.webp" alt="Biscoff Premium Croffles" />
     <div class="menu-item-details">
@@ -65,7 +67,7 @@
       </div>
     </div>
   </div>
-<!-- Item: Chocolate Premium Croffles -->
+
   <div class="menu-item" data-item-name="Chocolate Premium Croffles" data-item-price="77.55">
     <img src="IMAGES.html/croffles/chocolate premium coffles.webp" alt="chocolate Premium Croffles" />
     <div class="menu-item-details">
@@ -81,7 +83,7 @@
     </div>
   </div>
 
-<!-- Item: Cinnamon Sugar Premium Croffles -->
+
   <div class="menu-item" data-item-name="Cinnamon Sugar Premium Croffles" data-item-price="77.55">
     <img src="IMAGES.html/croffles/cinnamon sugar premium croffles.webp" alt="Cinnamon Sugar Premium Croffles" />
     <div class="menu-item-details">
@@ -97,7 +99,7 @@
     </div>
   </div>
 
-<!-- Item: Oreo Premium Croffles -->
+
   <div class="menu-item" data-item-name="Oreo Premium Croffles" data-item-price="77.55">
     <img src="IMAGES.html/croffles/oreo premium croffles.webp" alt="Oreo Premium Croffles" />
     <div class="menu-item-details">
@@ -113,7 +115,7 @@
     </div>
   </div>
 
-<!-- Item: S'mores Premium Croffles -->
+
   <div class="menu-item" data-item-name="S'mores Premium Croffles" data-item-price="77.55">
     <img src="IMAGES.html/croffles/s'mores premium coffles.webp" alt="S'mores Premium Croffles" />
     <div class="menu-item-details">
@@ -129,7 +131,7 @@
     </div>
   </div>
 
-  <!-- Item: Strawberry Premium Croffles -->
+
   <div class="menu-item" data-item-name="Strawberry Premium Croffles" data-item-price="77.55">
     <img src="IMAGES.html/croffles/strawberry premuim croffles.webp" alt="Strawberry Premium Croffles" />
     <div class="menu-item-details">
@@ -151,6 +153,7 @@
  <footer class="bottom-section">
 
     <button class="add-to-cart">Add to Cart</button>
+    
 
  <h2>MOOD & BITES</h2>
 
@@ -172,105 +175,11 @@
     <i class="fab fa-twitter"></i> 
   </a>
 </div>
+<script src="javascript/script.js"></script>
 
 </div>
     </footer>
-    <script>
-let cartItems = [];
-
-// Initialize quantity controls
-document.querySelectorAll('.increase, .decrease').forEach(button => {
-  button.addEventListener('click', () => {
-    const menuItem = button.closest('.menu-item');
-    const qtySpan = menuItem.querySelector('.quantity');
-    let qty = parseInt(qtySpan.textContent);
     
-    if (button.classList.contains('increase')) {
-      qty++;
-    } else if (button.classList.contains('decrease')) {
-      if (qty > 0) {
-        qty--;
-      }
-    }
-    qtySpan.textContent = qty;
-  });
-});
-
-// Load cart from localStorage
-function loadCartFromStorage() {
-  const stored = localStorage.getItem('moodBites_cart');
-  if (stored) {
-    try {
-      const parsed = JSON.parse(stored);
-      if (Array.isArray(parsed)) {
-        cartItems = parsed;
-        return;
-      }
-    } catch(e) {}
-  }
-  cartItems = [];
-}
-
-// Save cart to localStorage
-function saveCartToStorage() {
-  localStorage.setItem('moodBites_cart', JSON.stringify(cartItems));
-}
-
-// Collect selected items from promotions page
-function collectSelectedItems() {
-  const items = [];
-  document.querySelectorAll('.menu-item').forEach(item => {
-    const qtySpan = item.querySelector('.quantity');
-    const quantity = parseInt(qtySpan.innerText) || 0;
-    if (quantity > 0) {
-      const name = item.getAttribute('data-item-name') || item.querySelector('h4')?.innerText || '';
-      const price = parseFloat(item.getAttribute('data-item-price')) || 0;
-      items.push({
-        id: name.replace(/\s/g, '_') + Date.now() + Math.random(),
-        name: name,
-        price: price,
-        quantity: quantity,
-        emoji: '🧇'
-      });
-    }
-  });
-  return items;
-}
-
-// Add to cart button
-document.querySelector('.add-to-cart').addEventListener('click', function() {
-  const selectedItems = collectSelectedItems();
-  
-  if (selectedItems.length === 0) {
-    alert('🛍️ Please select at least one item quantity before adding to cart.');
-    return;
-  }
-  
-  loadCartFromStorage();
-  
-  // Add or merge items into cart
-  selectedItems.forEach(newItem => {
-    const existing = cartItems.find(i => i.name === newItem.name);
-    if (existing) {
-      existing.quantity += newItem.quantity;
-    } else {
-      cartItems.push(newItem);
-    }
-  });
-  
-  saveCartToStorage();
-  
-  let totalItems = selectedItems.reduce((sum, i) => sum + i.quantity, 0);
-  alert(`✅ ${totalItems} promo item(s) added to cart! Go to the Menu page to review your order.`);
-  
-  // Reset quantities
-  document.querySelectorAll('.quantity').forEach(qtySpan => {
-    qtySpan.innerText = '0';
-  });
-});
-
-loadCartFromStorage();
-</script>
 
 </body>
 </html>

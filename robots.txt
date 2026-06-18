@@ -1,0 +1,58 @@
+# ============================================
+# ROBOTS.TXT - Mood & Bites
+# Instructions for search engine crawlers
+# ============================================
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+
+# Crawl delay - be respectful to servers
+Crawl-delay: 5
+
+# Sitemap location
+Sitemap: https://moodandbites.com/sitemap.xml
+
+# ============================================
+# SPECIFIC SEARCH ENGINES
+# ============================================
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+
+# Bingbot
+User-agent: bingbot
+Allow: /
+Crawl-delay: 2
+
+# Yahoo
+User-agent: Yahoo Slurp
+Allow: /
+Crawl-delay: 2
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 2
+
+# ============================================
+# BLOCK BAD BOTS (Optional)
+# ============================================
+
+# Block known spam bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

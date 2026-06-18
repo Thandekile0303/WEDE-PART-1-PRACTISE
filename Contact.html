@@ -1,233 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Contact Us</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+  <title>Contact & Enquiry | Mood & Bites</title>
+  <meta name="description" content="Contact Mood & Bites for inquiries, support, or make an enquiry about services, products, volunteering, or sponsorship.">
+  <meta name="keywords" content="contact mood and bites, enquiry, services, products, volunteer, sponsor">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://moodandbites.com/contact.html">
   
+  <meta property="og:title" content="Contact & Enquiry | Mood & Bites">
+  <meta property="og:description" content="Get in touch or make an enquiry with Mood & Bites.">
+  <meta property="og:type" content="website">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
 </head>
 <body>
-<div class="contact-container">
-  <div class="contact-wrapper">
-    
-    <div class="info-panel">
-      <div class="badge-icon">📞 Get in touch</div>
-      <h1>Mood & Bites<br></h1>
-      <div class="greeting">
-        We're here to help and answer any question you might have. We look forward to hearing from you.
-      </div>
 
+<div class="main-container">
+  <header class="page-header fade-in">
+    <h1>Mood & <span>Bites</span></h1>
+    <p>We're here to help — get in touch or make an enquiry</p>
+
+  </header>
+
+  <nav class="tab-nav" role="tablist">
+    <button class="tab-btn active" data-tab="contact" role="tab">
+      <i class="fas fa-envelope"></i> <span>Contact</span>
+    </button>
+    <button class="tab-btn" data-tab="enquiry" role="tab">
+      <i class="fas fa-clipboard-list"></i> <span>Enquiry</span>
+    </button>
+  </nav>
+
+  <div id="tab-contact" class="tab-content active" role="tabpanel">
+    <div class="contact-wrapper">
       
-      <div class="contact-details">
-        <div class="detail-item">
-          <div class="detail-emoji">📍</div>
-          <div class="detail-text">
-            <strong>Visit us</strong>
-            <p>83 National Road Putatan</p>
+      <!-- Info Panel -->
+      <div class="info-panel">
+        <div class="badge">
+          <i class="fas fa-phone-alt"></i> Get in touch
+        </div>
+        <h2>Contact Us</h2>
+        <p class="greeting">
+          We're here to help and answer any question you might have. We look forward to hearing from you.
+        </p>
+
+        <div class="contact-details">
+          <div class="detail-item">
+            <div class="detail-icon"><i class="fas fa-location-dot"></i></div>
+            <div class="detail-text">
+              <strong>Visit us</strong>
+              <p>83 National Road, Putatan</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon"><i class="fas fa-envelope"></i></div>
+            <div class="detail-text">
+              <strong>Email</strong>
+              <p><a href="mailto:Mood&Bites@gmail.com">Mood&Bites@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon"><i class="fas fa-phone"></i></div>
+            <div class="detail-text">
+              <strong>Phone</strong>
+              <p><a href="tel:+639298470795">+63 929 847 0795</a></p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon"><i class="fas fa-clock"></i></div>
+            <div class="detail-text">
+              <strong>Support hours</strong>
+              <p>Mon – Fri: 9am – 6pm (PST)</p>
+            </div>
           </div>
         </div>
-        <div class="detail-item">
-          <div class="detail-emoji">📧</div>
-          <div class="detail-text">
-            <strong>Email</strong>
-            <p><a href="mailto:Mood&Bites@gmail.com">Mood&Bites@gmail.com</a></p>
+
+        <div class="social-section">
+          <h4>Follow us</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
           </div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-emoji">📞</div>
-          <div class="detail-text">
-            <strong>Phone</strong>
-            <p><a href="tel:+63 929 847 0795">+63 929 847 0795</a></p>
-          </div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-emoji">⏰</div>
-          <div class="detail-text">
-            <strong>Support hours</strong>
-            <p>Mon - Fri: 9am – 6pm (PST)</p>
+          <div class="social-note">
+            <span><i class="fas fa-headset"></i> 24/7 chat support</span>
+            <span><i class="fas fa-reply-fast"></i> We reply within 24h</span>
           </div>
         </div>
       </div>
 
-      <div class="social-note">
-        <span>✨ Follow us: @MoodAndBites</span>
-        <span>📢 24/7 chat support</span>
-      </div>
-      
-    </div>
+      <div class="form-panel">
+        <div class="form-header">
+          <h3>Send a message</h3>
+          <p>We'll reply within 24 hours – guaranteed.</p>
+        </div>
 
-    
-    <div class="form-panel">
-      <div class="form-header">
-        <h2>Send a message</h2>
-        <p>We'll reply within 24 hours – guaranteed.</p>
-      </div>
-
-      <form id="contactForm" action="#" method="post">
-        <div class="double-group">
-          <div class="input-group">
-            <label for="fullname">Full name *</label>
-            <input type="text" id="fullname" name="fullname" placeholder="Alex Johnson" required>
+        <form id="contactForm" action="#" method="post" novalidate>
+          <div class="double-group">
+            <div class="form-group">
+              <label for="fullname"><i class="fas fa-user"></i> Full name <span class="required">*</span></label>
+              <input type="text" id="fullname" name="fullname" placeholder="Thabo Nkosi" required minlength="2" maxlength="50">
+              <span class="error-message" id="fullnameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+              <span class="error-message" id="emailError"></span>
+            </div>
           </div>
-          <div class="input-group">
-            <label for="email">Email address *</label>
-            <input type="email" id="email" name="email" placeholder="alex@example.com" required>
+
+          <div class="form-group">
+            <label for="phone"><i class="fas fa-phone"></i> Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+27 71 234 5678" pattern="[0-9+\-\s]{10,15}">
+            <span class="error-message" id="phoneError"></span>
           </div>
-        </div>
 
-        <div class="input-group">
-          <label for="subject">Subject</label>
-          <select id="subject" name="subject">
-            <option value="general">General inquiry</option>
-            <option value="support">Customer support</option>
-            <option value="partnership">Partnership / Collaboration</option>
-            <option value="feedback">Feedback</option>
-          </select>
-        </div>
+          <div class="form-group">
+            <label for="subject"><i class="fas fa-tag"></i> Subject <span class="required">*</span></label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="general">General inquiry</option>
+              <option value="support">Customer support</option>
+              <option value="partnership">Partnership / Collaboration</option>
+              <option value="feedback">Feedback</option>
+            </select>
+            <span class="error-message" id="subjectError"></span>
+          </div>
 
-        <div class="input-group">
-          <label for="message">Message *</label>
-          <textarea id="message" name="message" placeholder="Tell us how we can help you ..." required></textarea>
-        </div>
+          <div class="form-group">
+            <label for="message"><i class="fas fa-comment"></i> Message <span class="required">*</span></label>
+            <textarea id="message" name="message" placeholder="Tell us how we can help you..." required minlength="10" maxlength="1000"></textarea>
+            <span class="error-message" id="messageError"></span>
+            <div class="char-counter"><span id="charCount">0</span> / 1000</div>
+          </div>
 
-        <div class="checkbox-group">
-          <input type="checkbox" id="newsletter" name="newsletter">
-          <label for="newsletter">Subscribe to receive product updates & design inspiration (no spam).</label>
-        </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">Subscribe to receive product updates &amp; design inspiration (no spam).</label>
+          </div>
 
-        
-        <div id="formStatus" class="form-status"></div>
+          <div id="formStatus" class="form-status" role="alert"></div>
 
-        <button type="submit" id="submitBtn">Send message →</button>
-      </form>
-      <p style="font-size: 0.7rem; margin-top: 1.2rem; color: #c89c84; text-align: center;">
-        * required fields | we value your privacy
-      </p>
+          <button type="submit" id="submitBtn" class="submit-btn">
+            <span class="btn-text">Send message</span>
+            <span class="btn-loader" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+
+          <div class="trust-badges">
+            <span><i class="fas fa-lock"></i> Secure</span>
+            <span><i class="fas fa-shield-alt"></i> Privacy protected</span>
+            <span><i class="fas fa-clock"></i> 24h response</span>
+          </div>
+
+          <p style="text-align:center;font-size:0.7rem;color:#b4a49c;margin-top:12px;">
+            * required fields · We value your privacy
+          </p>
+        </form>
+      </div>
     </div>
   </div>
+
+  <div id="tab-enquiry" class="tab-content" role="tabpanel">
+    <div class="contact-wrapper">
+      
+      <!-- Info Panel -->
+      <div class="info-panel">
+        <div class="badge">
+          <i class="fas fa-clipboard-list"></i> Make an enquiry
+        </div>
+        <h2>Enquiry</h2>
+        <p class="greeting">
+          Interested in our services, products, or want to volunteer or sponsor? Fill in the form and we'll get back to you.
+        </p>
+
+        <div class="contact-details">
+          <div class="detail-item">
+            <div class="detail-icon"><i class="fas fa-concierge-bell"></i></div>
+            <div class="detail-text">
+              <strong>Services</strong>
+              <p>Catering, Event Planning, Consulting</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon"><i class="fas fa-box"></i></div>
+            <div class="detail-text">
+              <strong>Products</strong>
+              <p>Coffee, Pasta, Baked Goods</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon"><i class="fas fa-hands-helping"></i></div>
+            <div class="detail-text">
+              <strong>Volunteer</strong>
+              <p>Join our team and make a difference</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon"><i class="fas fa-handshake"></i></div>
+            <div class="detail-text">
+              <strong>Sponsor</strong>
+              <p>Partner with us and grow together</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-section">
+          <h4>Follow us</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+          <div class="social-note">
+            <span><i class="fas fa-clock"></i> Response within 24h</span>
+            <span><i class="fas fa-heart" style="color:#ff9a86;"></i> We'd love to hear from you</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-panel">
+        <div class="form-header">
+          <h3>Make an Enquiry</h3>
+          <p>Fill in the form below and we'll get back to you within 24 hours.</p>
+        </div>
+
+        <form id="enquiryForm" action="#" method="post" novalidate>
+          <div class="double-group">
+            <div class="form-group">
+              <label for="enqName"><i class="fas fa-user"></i> Full Name <span class="required">*</span></label>
+              <input type="text" id="enqName" name="enqName" placeholder="Thabo Nkosi" required minlength="2" maxlength="50">
+              <span class="error-message" id="enqNameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="enqEmail"><i class="fas fa-envelope"></i> Email <span class="required">*</span></label>
+              <input type="email" id="enqEmail" name="enqEmail" placeholder="hello@example.com" required>
+              <span class="error-message" id="enqEmailError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="enqPhone"><i class="fas fa-phone"></i> Phone</label>
+            <input type="tel" id="enqPhone" name="enqPhone" placeholder="+27 71 234 5678" pattern="[0-9+\-\s]{10,15}">
+            <span class="error-message" id="enqPhoneError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="enquiryType"><i class="fas fa-tag"></i> Type of Enquiry <span class="required">*</span></label>
+            <select id="enquiryType" name="enquiryType" required>
+              <option value="">Select an option...</option>
+              <option value="services">Services</option>
+              <option value="products">Products</option>
+              <option value="volunteer">Volunteer Opportunity</option>
+              <option value="sponsor">Sponsorship</option>
+            </select>
+            <span class="error-message" id="enquiryTypeError"></span>
+          </div>
+
+          <div id="serviceFields" class="conditional-fields">
+            <div class="form-group">
+              <label for="serviceType">Service Interested In</label>
+              <select id="serviceType" name="serviceType">
+                <option value="catering">Catering</option>
+                <option value="event">Event Planning</option>
+                <option value="consulting">Consulting</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="eventDate">Event Date</label>
+              <input type="date" id="eventDate" name="eventDate">
+            </div>
+            <div class="form-group">
+              <label for="guestCount">Estimated Guests</label>
+              <input type="number" id="guestCount" name="guestCount" placeholder="50" min="1">
+            </div>
+          </div>
+
+          <div id="productFields" class="conditional-fields">
+            <div class="form-group">
+              <label for="productInterest">Product Interested In</label>
+              <select id="productInterest" name="productInterest">
+                <option value="coffee">Coffee</option>
+                <option value="pasta">Pasta</option>
+                <option value="baked">Baked Goods</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <input type="number" id="quantity" name="quantity" placeholder="10" min="1">
+            </div>
+          </div>
+
+          <div id="volunteerFields" class="conditional-fields">
+            <div class="form-group">
+              <label for="availability">Availability</label>
+              <select id="availability" name="availability">
+                <option value="weekdays">Weekdays</option>
+                <option value="weekends">Weekends</option>
+                <option value="both">Both</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="skills">Skills / Experience</label>
+              <textarea id="skills" name="skills" placeholder="Tell us about your skills..." rows="2"></textarea>
+            </div>
+          </div>
+
+          <div id="sponsorFields" class="conditional-fields">
+            <div class="form-group">
+              <label for="sponsorType">Sponsorship Type</label>
+              <select id="sponsorType" name="sponsorType">
+                <option value="financial">Financial</option>
+                <option value="product">Product</option>
+                <option value="service">Service</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="sponsorAmount">Sponsorship Amount (R)</label>
+              <input type="number" id="sponsorAmount" name="sponsorAmount" placeholder="5000" min="0">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="enqMessage"><i class="fas fa-comment"></i> Your Message <span class="required">*</span></label>
+            <textarea id="enqMessage" name="enqMessage" placeholder="Tell us more about your enquiry..." rows="4" required minlength="10" maxlength="500"></textarea>
+            <span class="error-message" id="enqMessageError"></span>
+            <div class="char-counter"><span id="enqCharCount">0</span> / 500</div>
+          </div>
+
+          <div id="enqStatus" class="form-status" role="alert"></div>
+
+          <button type="submit" id="enqSubmitBtn" class="submit-btn">
+            <span class="btn-text">Submit Enquiry</span>
+            <span class="btn-loader" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Processing...</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+
+          <div class="trust-badges">
+            <span><i class="fas fa-lock"></i> Secure</span>
+            <span><i class="fas fa-shield-alt"></i> Privacy protected</span>
+            <span><i class="fas fa-clock"></i> 24h response</span>
+          </div>
+
+          <p style="text-align:center;font-size:0.7rem;color:#b4a49c;margin-top:12px;">
+            * required fields · We value your privacy
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <section class="map-section fade-in">
+    <h3><i class="fas fa-location-dot"></i>Find us here</h3>
+    <div id="map"></div>
+  </section>
+
+  <section class="faq-section fade-in">
+    <h3><i class="fas fa-circle-question"></i>Frequently asked questions</h3>
+    <div class="accordion-container">
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          What are your operating hours?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>We're open Monday to Friday from 9:00 AM to 6:00 PM (PST). We're closed on weekends and public holidays.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          Do you offer delivery?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>Yes! We offer delivery within a 10km radius. Delivery fees apply based on distance. Minimum order is R50.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          How can I become a volunteer?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>We'd love to have you! Simply go to the <strong>Enquiry</strong> tab above and select "Volunteer" as the enquiry type.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          Do you have gluten-free options?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>Yes, we offer several gluten-free options. Please check our menu for items marked GF.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </div>
 
-<script>
-  (function() {
-    
-    const form = document.getElementById('contactForm');
-    const statusDiv = document.getElementById('formStatus');
-    const submitBtn = document.getElementById('submitBtn');
+<footer class="main-footer">
+  <div class="footer-content">
+    <p>&copy; 2026 Mood & Bites. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="">Terms of Service</a>
+      <a href="sitemap.xml">Sitemap</a>
+    </div>
+  </div>
+</footer>
 
-    
-    function setStatus(message, isError = false) {
-      statusDiv.innerHTML = message;
-      if (isError) {
-        statusDiv.className = 'form-status error-message';
-      } else {
-        statusDiv.className = 'form-status success-message';
-      }
-     
-      if (!isError) {
-        setTimeout(() => {
-          if (statusDiv.innerHTML === message) {
-            statusDiv.innerHTML = '';
-            statusDiv.className = 'form-status';
-          }
-        }, 5000);
-      }
-    }
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/script.js"></script>
 
-    
-    function clearStatus() {
-      if (statusDiv.innerHTML !== '') {
-        
-      }
-    }
-
-    
-    const clearStatusOnInput = () => {
-      if (statusDiv.classList.contains('error-message')) {
-        statusDiv.innerHTML = '';
-        statusDiv.className = 'form-status';
-      }
-    };
-    const allInputs = form.querySelectorAll('input, textarea, select');
-    allInputs.forEach(input => {
-      input.addEventListener('input', clearStatusOnInput);
-      input.addEventListener('change', clearStatusOnInput);
-    });
-
-    
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      
-      const fullname = document.getElementById('fullname').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const subjectSelect = document.getElementById('subject');
-      const subject = subjectSelect.options[subjectSelect.selectedIndex]?.text || 'General';
-      const newsletterChecked = document.getElementById('newsletter').checked;
-
-      
-      if (!fullname) {
-        setStatus('❌ Please enter your full name.', true);
-        document.getElementById('fullname').focus();
-        return;
-      }
-      if (!email) {
-        setStatus('❌ Email address is required.', true);
-        document.getElementById('email').focus();
-        return;
-      }
-      // basic email pattern
-      const emailPattern = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
-      if (!emailPattern.test(email)) {
-        setStatus('❌ Please provide a valid email address (e.g., name@domain.com).', true);
-        document.getElementById('email').focus();
-        return;
-      }
-      if (!message) {
-        setStatus('❌ Message cannot be empty. Tell us what you need!', true);
-        document.getElementById('message').focus();
-        return;
-      }
-
-      
-      const btnOriginalText = submitBtn.innerText;
-      submitBtn.disabled = true;
-      submitBtn.innerText = 'Sending ...';
-      
-      
-      const formData = {
-        fullname,
-        email,
-        subject: subjectSelect.value,
-        subjectLabel: subject,
-        message,
-        newsletter: newsletterChecked,
-        timestamp: new Date().toLocaleString()
-      };
-      
-      console.log('📬 Contact form submitted (demo):', formData);
-      
-      
-      setTimeout(() => {
-        
-        let successMsg = `✨ Thanks ${fullname.split(' ')[0]}! Your message has been delivered. We'll reach out within 24h.`;
-        if (newsletterChecked) successMsg += ` (You're subscribed to updates!)`;
-        setStatus(successMsg, false);
-        
-        
-        form.reset();
-       
-        submitBtn.disabled = false;
-        submitBtn.innerText = btnOriginalText;
-        
-       
-        statusDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        
-        
-      }, 600);
-    });
-  })();
-</script>
 </body>
 </html>
