@@ -1,19 +1,9 @@
-/**
- * ============================================
- * MOOD & BITES - COMPLETE MERGED JAVASCRIPT
- * All functionality working together
- * Peach & Pink Theme
- * ============================================
- */
 
 (function() {
   'use strict';
 
   console.log('🌸 Mood & Bites - All Systems Ready');
 
-  // ==========================================
-  // 1. GLOBAL CART
-  // ==========================================
 
   let cartItems = [];
 
@@ -35,9 +25,6 @@
     cartItems = [];
   }
 
-  // ==========================================
-  // 2. PAGE NAVIGATION
-  // ==========================================
 
   function showPage(pageId) {
     document.querySelectorAll('.page').forEach(page => {
@@ -52,10 +39,6 @@
       renderReviewCart();
     }
   }
-
-  // ==========================================
-  // 3. COLLECT SELECTED ITEMS
-  // ==========================================
 
   function collectSelectedItems(pageType = 'menu') {
     const items = [];
@@ -96,9 +79,6 @@
     return items;
   }
 
-  // ==========================================
-  // 4. RENDER REVIEW CART
-  // ==========================================
 
   function renderReviewCart() {
     const container = document.getElementById('cartItemsContainer');
@@ -160,10 +140,6 @@
     });
   }
 
-  // ==========================================
-  // 5. CART OPERATIONS
-  // ==========================================
-
   function updateQuantity(itemId, delta) {
     const index = cartItems.findIndex(i => i.id === itemId);
     if (index !== -1) {
@@ -183,10 +159,6 @@
     saveCartToStorage();
     renderReviewCart();
   }
-
-  // ==========================================
-  // 6. QUANTITY CONTROLS - MENU
-  // ==========================================
 
   function initMenuQuantityControls() {
     const allItems = document.querySelectorAll('#menuPage .menu-item');
@@ -218,9 +190,6 @@
     });
   }
 
-  // ==========================================
-  // 7. QUANTITY CONTROLS - PROMO
-  // ==========================================
 
   function initPromoQuantityControls() {
     const promoItems = document.querySelectorAll('.promo-item');
@@ -267,9 +236,6 @@
     });
   }
 
-  // ==========================================
-  // 8. ADD TO CART - MENU
-  // ==========================================
 
   const orderAlertBtn = document.getElementById('orderAlertBtn');
   if (orderAlertBtn) {
@@ -302,9 +268,6 @@
     });
   }
 
-  // ==========================================
-  // 9. ADD TO CART - PROMO
-  // ==========================================
 
   document.addEventListener('DOMContentLoaded', function() {
     initPromoQuantityControls();
@@ -354,9 +317,6 @@
     }
   });
 
-  // ==========================================
-  // 10. CHECKOUT BUTTON
-  // ==========================================
 
   const checkoutBtn = document.getElementById('checkoutBtn');
   if (checkoutBtn) {
@@ -369,10 +329,6 @@
       showPage('payment');
     });
   }
-
-  // ==========================================
-  // 11. MENU CATEGORY FILTER
-  // ==========================================
 
   const catBtns = document.querySelectorAll('#menuPage .category-btn');
   const allGroups = document.querySelectorAll('#menuPage .category-group');
@@ -404,9 +360,6 @@
     setActiveCategory('coffee');
   }
 
-  // ==========================================
-  // 12. SEARCH FUNCTION
-  // ==========================================
 
   const searchInputEl = document.getElementById('searchInput');
 
@@ -430,9 +383,6 @@
     searchInputEl.addEventListener('input', performSearch);
   }
 
-  // ==========================================
-  // 13. ABOUT PAGE NAVIGATION
-  // ==========================================
 
   const menuBtn = document.getElementById('menuBtn');
   const promoBtn = document.getElementById('promoBtn');
@@ -510,9 +460,6 @@
     aboutLink.style.fontWeight = '600';
   }
 
-  // ==========================================
-  // 14. CONTACT FORM
-  // ==========================================
 
   const contactForm = document.getElementById('contactForm');
   const contactStatus = document.getElementById('formStatus');
@@ -691,9 +638,6 @@
     }
   }
 
-  // ==========================================
-  // 15. FAQ ACCORDION
-  // ==========================================
 
   const accordionHeaders = document.querySelectorAll('.accordion-header');
   
@@ -724,9 +668,6 @@
     });
   });
 
-  // ==========================================
-  // 16. INTERACTIVE MAP
-  // ==========================================
 
   function initMap() {
     const mapContainer = document.getElementById('map');
@@ -767,9 +708,6 @@
     }
   }
 
-  // ==========================================
-  // 17. LIGHTBOX GALLERY
-  // ==========================================
 
   function initLightbox() {
     const images = document.querySelectorAll('.gallery-item img, .menu-item img, .promo-item img, .lightbox-trigger');
@@ -889,9 +827,6 @@
     console.log('🖼️ Lightbox initialized with ' + imageArray.length + ' images');
   }
 
-  // ==========================================
-  // 18. SCROLL ANIMATIONS
-  // ==========================================
 
   function initAnimations() {
     if ('IntersectionObserver' in window) {
@@ -916,9 +851,6 @@
     }
   }
 
-  // ==========================================
-  // 19. AUTO-RESIZE TEXTAREA
-  // ==========================================
 
   function autoResizeTextarea() {
     const textareas = document.querySelectorAll('textarea');
@@ -930,9 +862,6 @@
     });
   }
 
-  // ==========================================
-  // 20. WINDOW RESIZE HANDLER
-  // ==========================================
 
   let resizeTimer;
   window.addEventListener('resize', function() {
@@ -947,34 +876,31 @@
     }, 250);
   });
 
-  // ==========================================
-  // 21. INITIALIZE ALL
-  // ==========================================
 
   document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 Mood & Bites - Initializing all features...');
     
-    // Load cart
+    
     loadCartFromStorage();
     
-    // Initialize menu controls
+    
     if (document.querySelector('#menuPage .menu-item')) {
       initMenuQuantityControls();
       performSearch();
     }
     
-    // Initialize promo controls
+   
     if (document.querySelector('.promo-item')) {
       initPromoQuantityControls();
     }
     
-    // Initialize contact page features
+  
     initMap();
     initLightbox();
     initAnimations();
     autoResizeTextarea();
     
-    // Show menu page by default
+   
     showPage('menu');
     
     console.log('✅ All features initialized successfully!');
